@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-FL22VKG</Machine>
+    <WindowsUser>Admin</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d960a4f8-609c-4cca-960b-dc28f5c33769</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Admin</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Admin\Desktop\CG3\CG3\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Users\Admin\Desktop\CG3\CG3\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F54BF457FA9213212A403E994A4F4B6BA229349CCE20C3F9F77B7D51EA066719</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>d960a4f8-609c-4cca-960b-dc28f5c33769_1.0.0.0_neutral__5gyrq6psz227t</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>d960a4f8-609c-4cca-960b-dc28f5c33769_5gyrq6psz227t!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>d960a4f8-609c-4cca-960b-dc28f5c33769</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Admin</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Admin\Desktop\CG3\CG3\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-05-05T15:35:58.939</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\css\stylesheet.css">
+      <PackagePath>css\stylesheet.css</PackagePath>
+      <Modified>2019-05-05T15:42:24.536</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2019-05-04T19:13:51.412</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2019-05-05T15:37:50.973</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2019-02-27T20:04:04.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+      <Modified>2019-05-07T11:06:41.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\js\PointerLockControls - Copy.js">
+      <PackagePath>js\PointerLockControls - Copy.js</PackagePath>
+      <Modified>2019-02-05T00:33:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\js\three.js">
+      <PackagePath>js\three.js</PackagePath>
+      <Modified>2019-02-05T00:33:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\Desktop\CG3\CG3\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2019-05-05T15:35:58.725</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

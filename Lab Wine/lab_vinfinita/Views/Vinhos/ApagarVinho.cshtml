@@ -1,0 +1,99 @@
+﻿@model lab_vinfinita.Models.Vinho
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Tem a certeza que quer eliminar este vinho da sua garrafeira?</h3>
+<div>
+    <h4>Vinho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeVinho)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeVinho)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capacidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FotoFrente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FotoFrente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FotoTras)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FotoTras)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FotoRotulo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FotoRotulo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TeorAlcoolico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TeorAlcoolico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Castas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Castas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoProducao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnoProducao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdProdutorNavigation.NomeProdutor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Possuir.IdProdutorNavigation.NomeProdutor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdRegiaoNavigation.NomeRegiao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Possuir.IdRegiaoNavigation.NomeRegiao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdTipoNavigation.NomeTipo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Possuir.IdTipoNavigation.NomeTipo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+    </dl>
+    
+    <form asp-action="ApagarVinho">
+        <input type="hidden" asp-for="IdVinho" />
+        <input type="submit" value="Apagar vinho da sua garrafeira" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar atrás</a>
+    </form>
+</div>

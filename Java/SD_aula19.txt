@@ -1,0 +1,18 @@
+SD Aula 19-03
+
+link slack : distsys-utad.slack.com
+
+navegar para a raiz -> ir para o desktop -> criar uma pasta -> ir para a pasta criada
+
+extend: interface
+implement: classes
+
+interface: lista de metodos publicos
+
+o nome que damos tem que ser o mesmo no ficheiro e na classe
+
+as classes implementam a herança de maneira diferente
+
+para verificar se existem erros: na cmd (em modo admin) -> javac *.java
+
+RMI Register - tem a instanciaçao dos varios objetos remotos

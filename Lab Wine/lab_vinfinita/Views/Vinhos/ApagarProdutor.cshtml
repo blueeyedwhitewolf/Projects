@@ -1,0 +1,27 @@
+﻿@model lab_vinfinita.Models.Produtor
+
+@{
+    ViewData["Title"] = "Apagar Produtor";
+}
+
+<h2>Apagar Produtor</h2>
+
+<h3>Tem a certeza que pretende apagar este produtor?</h3>
+<div>
+    <h4>Produtor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeProdutor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeProdutor)
+        </dd>
+    </dl>
+    
+    <form asp-action="ApagarProdutor">
+        <input type="hidden" asp-for="IdProdutor" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="ListagemProdutores">Voltar atrás</a>
+    </form>
+</div>

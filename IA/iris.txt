@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="PetalWidthCm <= 0.75\nentropy = 1.584\nsamples = 100\nvalue = [32, 34, 34]", fillcolor="#39e58100"] ;
+1 [label="entropy = 0.0\nsamples = 32\nvalue = [32, 0, 0]", fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="PetalWidthCm <= 1.75\nentropy = 1.0\nsamples = 68\nvalue = [0, 34, 34]", fillcolor="#39e58100"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="PetalLengthCm <= 4.95\nentropy = 0.494\nsamples = 37\nvalue = [0, 33, 4]", fillcolor="#39e581e0"] ;
+2 -> 3 ;
+4 [label="PetalWidthCm <= 1.65\nentropy = 0.201\nsamples = 32\nvalue = [0, 31, 1]", fillcolor="#39e581f7"] ;
+3 -> 4 ;
+5 [label="entropy = 0.0\nsamples = 31\nvalue = [0, 31, 0]", fillcolor="#39e581ff"] ;
+4 -> 5 ;
+6 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 0, 1]", fillcolor="#8139e5ff"] ;
+4 -> 6 ;
+7 [label="PetalWidthCm <= 1.55\nentropy = 0.971\nsamples = 5\nvalue = [0, 2, 3]", fillcolor="#8139e555"] ;
+3 -> 7 ;
+8 [label="entropy = 0.0\nsamples = 2\nvalue = [0, 0, 2]", fillcolor="#8139e5ff"] ;
+7 -> 8 ;
+9 [label="SepalLengthCm <= 6.95\nentropy = 0.918\nsamples = 3\nvalue = [0, 2, 1]", fillcolor="#39e5817f"] ;
+7 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 2\nvalue = [0, 2, 0]", fillcolor="#39e581ff"] ;
+9 -> 10 ;
+11 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 0, 1]", fillcolor="#8139e5ff"] ;
+9 -> 11 ;
+12 [label="PetalLengthCm <= 4.85\nentropy = 0.206\nsamples = 31\nvalue = [0, 1, 30]", fillcolor="#8139e5f6"] ;
+2 -> 12 ;
+13 [label="SepalWidthCm <= 3.0\nentropy = 1.0\nsamples = 2\nvalue = [0, 1, 1]", fillcolor="#39e58100"] ;
+12 -> 13 ;
+14 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 0, 1]", fillcolor="#8139e5ff"] ;
+13 -> 14 ;
+15 [label="entropy = 0.0\nsamples = 1\nvalue = [0, 1, 0]", fillcolor="#39e581ff"] ;
+13 -> 15 ;
+16 [label="entropy = 0.0\nsamples = 29\nvalue = [0, 0, 29]", fillcolor="#8139e5ff"] ;
+12 -> 16 ;
+}

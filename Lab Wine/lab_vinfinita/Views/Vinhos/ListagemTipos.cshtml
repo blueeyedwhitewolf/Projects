@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Tipo>
+
+@{
+    ViewData["Title"] = "Listagem Tipos";
+}
+
+<h2>Listagem de tipos de vinhos</h2>
+
+<p>
+    <a asp-action="InserirTipo">Crie um novo tipo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model=>Model.NomeTipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTipo)
+            </td>
+            <td>
+                <a asp-action="ApagarTipo" asp-route-id="@item.IdTipo">Apagar tipo</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

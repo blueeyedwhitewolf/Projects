@@ -1,0 +1,88 @@
+﻿@model lab_vinfinita.Models.Vinho
+
+@{
+    ViewData["Title"] = "Adicionar Vinho";
+}
+
+<h2>Adicione um vinho</h2>
+
+<h4>Vinho</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarVinho" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeVinho" class="control-label"></label>
+                <input asp-for="NomeVinho" class="form-control" />
+                <span asp-validation-for="NomeVinho" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capacidade" class="control-label"></label>
+                <input asp-for="Capacidade" class="form-control" />
+                <span asp-validation-for="Capacidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoFrente" class="control-label">Foto frente</label>
+                <input type="file" name="FotoF" accept="jpg" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoTras" class="control-label">Foto trás</label>
+                <input type="file" name="FotoT" accept="jpg" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FotoRotulo" class="control-label">Foto do rótulo</label>
+                <input type="file" name="FotoR" accept="jpg" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="TeorAlcoolico" class="control-label">Teor Alcóolico</label>
+                <input asp-for="TeorAlcoolico" class="form-control" />
+                <span asp-validation-for="TeorAlcoolico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Castas" class="control-label"></label>
+                <input asp-for="Castas" class="form-control" />
+                <span asp-validation-for="Castas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnoProducao" class="control-label">Ano de Produção</label>
+                <input asp-for="AnoProducao" class="form-control" />
+                <span asp-validation-for="AnoProducao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdProdutor" class="control-label"></label>
+                <select asp-for="IdProdutor" asp-items="ViewBag.IdProdutor" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdRegiao" class="control-label"></label>
+                <select asp-for="IdRegiao" asp-items="ViewBag.IdRegiao" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTipo" class="control-label"></label>
+                <select asp-for="IdTipo" asp-items="ViewBag.IdTipo" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stock" class="control-label"></label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInsercao" class="control-label"></label>
+                @DateTime.Now;
+            </div>
+            <div class="form-group">
+                <input type="submit" name="submit" value="Criar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar à página anterior</a>
+</div>
+

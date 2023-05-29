@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Contactar";
+}
+<h2>@ViewData["Contacte uma garrafeira"]</h2>
+<h3>@ViewData["Mensagem"]</h3>
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h3>Contacte uma garrafeira</h3>
+<form asp-action="Index" asp-controller="Home" method="post">
+    <div>
+        <label>Insira o seu nome:</label>
+        <div contenteditable="true" style="width:200px;height:20px;overflow:visible; background-color: #A9A9A9"></div>
+    </div>
+    <div>
+        <label>Assunto:</label>
+        <div contenteditable="true" style="width:200px;height:20px;overflow:visible; background-color: #A9A9A9"></div>
+    </div>
+    <div>
+        <label>Insira o seu email:</label>
+        <div contenteditable="true" style="width:200px;height:20px;overflow:visible; background-color: #A9A9A9"></div>
+    </div>
+    <div>
+        <label>Insira o email da garrafeira:</label>
+        <div contenteditable="true" style="width:200px;height:20px;overflow:visible; background-color: #A9A9A9"></div>
+    </div>
+    <div>
+        <label>Insira a mensagem:</label>
+        <div contenteditable="true" style="width:300px;height:100px;overflow:visible; background-color: #A9A9A9"></div>
+    </div>
+    <input style="background-color: #A9A9A9" type="submit" value="Enviar Mensagem!" />
+</form>

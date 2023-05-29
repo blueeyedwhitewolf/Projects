@@ -1,0 +1,67 @@
+﻿@model lab_vinfinita.Models.Vinho
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>Mais informaçoes sobre o vinho</h2>
+
+<div>
+    <h4>Vinho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeVinho)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeVinho)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capacidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TeorAlcoolico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TeorAlcoolico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Castas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Castas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoProducao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnoProducao)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdProdutorNavigation.NomeProdutor)
+        </dt>
+        <dd>
+            @(ViewBag.nomeprodutor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdRegiaoNavigation.NomeRegiao)
+        </dt>
+        <dd>
+            @(ViewBag.nomeregiao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Possuir.IdTipoNavigation.NomeTipo)
+        </dt>
+        <dd>
+            @(ViewBag.nometipo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ContactarGarrafeira" asp-route-id="@Model.IdVinho">Alterar Preco</a> |
+    <a asp-action="RecomendarVinho" asp-route-id="@Model.IdVinho">Alterar Stock</a> |
+    <a asp-action="Index">Voltar atrás</a>
+</div>

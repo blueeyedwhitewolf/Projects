@@ -1,0 +1,46 @@
+﻿    @model IEnumerable<lab_vinfinita.Models.Vinho>
+
+    @{
+        ViewData["Title"] = "Catalogo";
+    }
+
+    <h2>Catálogo</h2>
+
+    @* Separados de tipos de vinho *@
+    @*<div id="tabs">
+        <ul>
+            <li><a href="#vinhobranco">Vinho Branco</a></li>
+            <li><a href="#vinhotinto">Vinho Tinto</a></li>
+            <li><a href="#vinhrose">Vinho Rosé</a></li>
+        </ul>
+    </div>*@
+
+
+    <div class="row" enctype="multipart/form-data">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-3" style="text-align:center;">
+                <div id="index-gallery">
+                    <div class="card">
+                        <div class="zoom">
+                            <a href="DetalhesVinho@item.IdVinho">
+                                <p style="text-align:center;"><img src="~/fotos/@item.FotoFrente" alt="Logo" style="width:40px; height:130px;"></p>
+                            </a>
+                        </div>
+                        <p>
+                            @Html.DisplayFor(modelItem => item.NomeVinho)
+                            @Html.DisplayFor(modelItem => item.AnoProducao)
+                        </p>
+                        <p class="price">
+                            @*@Html.DisplayFor(modelItem => item.Preco)€*@
+                            @ViewBag.preco
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @*<td>
+                    <a asp-action="DetalhesVinho" asp-route-id="@item.IdVinho">Detalhes do vinho</a> |
+                </td>*@
+        }
+
+    </div>

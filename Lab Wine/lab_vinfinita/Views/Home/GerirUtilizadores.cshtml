@@ -1,0 +1,48 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Utilizador>
+
+@{
+    ViewData["Title"] = "Gerir Utilizadores";
+}
+
+<h2>Gestão de Utilizadores</h2>
+
+<p>
+    <a asp-action="Create">Adicionar um novo utilizador</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoConta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoConta)
+                </td>
+                <td>
+                    <a asp-action="Suspender" asp-route-id="@item.IdUtilizador">Suspender Utilizador</a> |
+                    <a asp-action="Bloquear" asp-route-id="@item.IdUtilizador">Bloquear Utilizador</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

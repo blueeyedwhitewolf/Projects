@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCA4CADF-3B89-4DD1-A48B-64BD5FA183D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_1DOMINO</RootNamespace>
+    <AssemblyName>1DOMINO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerDomino.cs" />
+    <Compile Include="Delegados.cs" />
+    <Compile Include="ModelDomino.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServidoresDisponiveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServidoresDisponiveis.Designer.cs">
+      <DependentUpon>ServidoresDisponiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LigarServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LigarServidor.Designer.cs">
+      <DependentUpon>LigarServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModoServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModoServidor.Designer.cs">
+      <DependentUpon>ModoServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerLigados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerLigados.Designer.cs">
+      <DependentUpon>VerLigados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDecidirJogadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDecidirJogadores.Designer.cs">
+      <DependentUpon>ViewDecidirJogadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEditarPerfilPessoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEditarPerfilPessoal.Designer.cs">
+      <DependentUpon>ViewEditarPerfilPessoal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMesa.Designer.cs">
+      <DependentUpon>ViewMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewNomeJog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewNomeJog.Designer.cs">
+      <DependentUpon>ViewNomeJog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPerfil.Designer.cs">
+      <DependentUpon>ViewPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPrincipal.Designer.cs">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogador.cs" />
+    <Compile Include="Mesa.cs" />
+    <Compile Include="Peca.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewRede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRede.Designer.cs">
+      <DependentUpon>ViewRede.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ModoServidor.resx">
+      <DependentUpon>ModoServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDecidirJogadores.resx">
+      <DependentUpon>ViewDecidirJogadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEditarPerfilPessoal.resx">
+      <DependentUpon>ViewEditarPerfilPessoal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMesa.resx">
+      <DependentUpon>ViewMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewNomeJog.resx">
+      <DependentUpon>ViewNomeJog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPerfil.resx">
+      <DependentUpon>ViewPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPrincipal.resx">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRede.resx">
+      <DependentUpon>ViewRede.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="apr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_5.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

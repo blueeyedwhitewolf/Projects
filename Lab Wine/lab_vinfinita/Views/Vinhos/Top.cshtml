@@ -1,0 +1,72 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Vinho>
+
+@{
+    ViewData["Title"] = "Top";
+}
+
+<h2 id="titulo"> Top de vinhos </h2>
+
+
+@foreach (var item in Model)
+{
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoFrente" />
+            </div>
+            <div class="item">
+                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoTras" />
+            </div>
+            <div class="item">
+                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoRotulo" />
+            </div>
+        </div>
+
+        <a class="left carousel-control" style="background:none; color:darkred" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" style="background:none; color:darkred" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+
+
+    <div class="col-sm-3" style="text-align:center;">
+
+
+        <p>@Html.DisplayFor(modelItem => item.NomeVinho)</p>
+        <p>@Html.DisplayFor(modelItem => item.AnoProducao)</p>
+        <p>@Html.DisplayFor(modelItem => item.Capacidade)</p>
+        <p>@Html.DisplayFor(modelItem => item.TeorAlcoolico)</p>
+        <p> @Html.DisplayFor(modelItem => item.Castas)</p>
+        <p> @Html.DisplayFor(modelItem => item.AnoProducao)</p>
+        <p> @Html.DisplayFor(modelItem => item.Possuir.IdProdutorNavigation.NomeProdutor)</p>
+        <p>@Html.DisplayFor(modelItem => item.Possuir.IdRegiaoNavigation.NomeRegiao)</p>
+        <p>@Html.DisplayFor(modelItem => item.Possuir.IdTipoNavigation.NomeTipo)</p>
+
+    </div>
+
+
+}
+
+<script>
+    setInterval(function () {
+        $('#time').text(new Date().toLocaleString());
+    }, 1000);  //1000 ms = 1 segundo
+
+    //Animação do texto (titulo) que vai desaparecendo e volta a aparecer de novo
+    setTimeout(function () {
+        $('#titulo').fadeOut(2000);
+        $('#titulo').css({ color: 'red' });
+        $('#titulo').fadeIn(2000);
+    }, 6000);
+
+</script>
+

@@ -1,0 +1,29 @@
+﻿  PROJETO LAB.cpp
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(34): warning C4477: 'scanf' : format string '%c' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(34): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(49): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(69): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(92): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int **'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(92): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(100): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'int *'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(128): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(135): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'int *'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(166): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int **'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(166): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(175): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'int *'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(218): error C3861: 'gravarLista': identifier not found
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(209): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(212): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(234): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(245): warning C4477: 'fprintf' : format string '%-6d' requires an argument of type 'int', but variadic argument 3 has type 'int *'
+c:\users\cátia\desktop\projeto lab\projeto lab\projeto lab.cpp(270): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'

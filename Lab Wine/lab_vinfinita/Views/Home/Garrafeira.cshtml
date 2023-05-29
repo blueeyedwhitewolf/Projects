@@ -1,0 +1,48 @@
+﻿@{
+}
+@{
+    ViewBag.Title = "Catálogo de cada Garrafeira";
+}
+
+<ul></ul>
+
+<div id="tabs">
+    <ul>
+        <li><a href="#garrafeira1">Garrafeira1</a></li>
+        <li><a href="#garrafeira2">Garrafeira2</a></li>
+        <li><a href="#garrafeira3">Garrafeira3</a></li>
+    </ul>
+
+    @*//introduzir dados dentro dos separadores*@
+    <div id="garrafeira1">
+        <img src="" id="imagem2" width="150" height="320" />
+
+    </div>
+
+    <div id="garrafeira2">
+        <img src="" id="imagem" width="150" height="320" />
+    </div>
+
+    <div id="garrafeira3">
+        <img src="" id="imagem" width="150" height="320" />
+    </div>
+
+</div>
+
+@*//Script para verificar se clicamos no texto da classe quadrado*@
+@section Scripts{
+    <script>
+        var i = 0;
+        setInterval(function () {
+            i = (i % 3) + 1;
+            $("#imagem").attr("src", "/images/fotos/vinho" + i + ".jpg");
+        }, 5000);
+        $("#tabs").tabs();
+
+        setInterval(function () {
+            i = (i % 3) + 1;
+            $("#imagem2").attr("src", "/images/fotos/vinhoo" + i + ".jpg");
+        }, 5000);
+        $("#tabs").tabs();
+    </script>
+}

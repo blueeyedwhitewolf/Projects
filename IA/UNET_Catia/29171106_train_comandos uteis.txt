@@ -1,0 +1,9 @@
+ 
+
+bash ~/UNET_R/20171106_train.py > /media/acunha/Trabalhos/VCE_Datasets/DatasetsPauloCoelho/20171106_SET_1000_delgado_e_3000/20171106_training_output.txt
+
+
+tail -f /media/acunha/Trabalhos/VCE_Datasets/DatasetsPauloCoelho/20171106_SET_1000_delgado_e_3000/20171106_training_output.txt
+
+
+tensorboard --logdir=/media/acunha/Trabalhos/VCE_Datasets/DatasetsPauloCoelho/20171106_SET_1000_delgado_e_3000/logs/

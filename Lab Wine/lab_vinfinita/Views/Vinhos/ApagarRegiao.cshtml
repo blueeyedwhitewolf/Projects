@@ -1,0 +1,27 @@
+﻿@model lab_vinfinita.Models.Regiao
+
+@{
+    ViewData["Title"] = "Apagar Regiao";
+}
+
+<h2>Apagar Regiao</h2>
+
+<h3>Tem a certeza que pretende apagar esta regiao?</h3>
+<div>
+    <h4>Regiao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeRegiao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeRegiao)
+        </dd>
+    </dl>
+    
+    <form asp-action="ApagarRegiao">
+        <input type="hidden" asp-for="IdRegiao" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="ListagemRegioes">Voltar atrás</a>
+    </form>
+</div>

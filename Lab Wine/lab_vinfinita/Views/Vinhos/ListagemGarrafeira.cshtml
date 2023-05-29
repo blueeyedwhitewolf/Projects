@@ -1,0 +1,137 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Vinho>
+
+@{
+    ViewData["Title"] = "Listagem de Vinhos";
+}
+
+
+<h2>Catálogo de Vinhos</h2>
+<h2>Listagem</h2>
+
+<p>
+    <a asp-action="CriarVinho">Adicionar um vinho</a>
+</p>
+@* Separados de tipos de vinho *@
+<div id="tabs">
+    <ul>
+        <li><a href="#vinhobranco">Vinho Branco</a></li>
+        <li><a href="#vinhotinto">Vinho Tinto</a></li>
+        <li><a href="#vinhrose">Vinho Rosé</a></li>
+    </ul>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeVinho)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacidade)
+            </th>
+            <th>
+                @Html.DisplayName("Fotografias")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeorAlcoolico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Castas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoProducao)
+            </th>
+            <th>
+                @Html.DisplayName("Tipo")
+            </th>
+            <th>
+                @Html.DisplayName("Regiao")
+            </th>
+            <th>
+                @Html.DisplayName("Produtor")
+            </th>
+            <th>
+                @Html.DisplayName("Preco")
+            </th>
+            <th>
+                @Html.DisplayName("Stock")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="@item.Inserir.Where(p=>p.IdGarrafeira==ViewBag.id_gar)">
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeVinho)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capacidade)
+                </td>
+                <td>
+
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoFrente" />
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoTras" />
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive center-block" style="object-fit:scale-down; width:200px; height:300px" src="~/fotos/@item.FotoRotulo" />
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control" style="background:none; color:darkred" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="right carousel-control" style="background:none; color:darkred" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeorAlcoolico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Castas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnoProducao)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Possuir.IdTipoNavigation.NomeTipo)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Possuir.IdRegiaoNavigation.NomeRegiao)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Possuir.IdProdutorNavigation.NomeProdutor)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </th>
+                <td>
+                    <a asp-action="AtualizarStock" asp-route-id="@item.IdVinho">Atualizar Stock</a> |
+                    <a asp-action="AtualizarPreco" asp-route-id="@item.IdVinho">Atualizar Preco</a> |
+                    <a asp-action="DetalhesVinho" asp-route-id="@item.IdVinho">Detalhes do vinho</a> |
+                    <a asp-action="ApagarVinho" asp-route-id="@item.IdVinho">Eliminar vinho</a>
+                </td>
+            </tr>
+        }
+        }
+    </tbody>
+</table>

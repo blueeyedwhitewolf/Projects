@@ -1,0 +1,42 @@
+PSO
+-inspiraçao biologica
+	-movimento sincronizado
+	-como decidir movimento?? decisao assente em 2 componentes
+		-experiencia do agente
+		-experiencia do bando
+-enxame de particulas
+	-conjunto de particals representadas por um indice i
+	-a evoluçao do enxame é avaliada a cada interaçao t
+	-variavel x - posiçao da particula
+	-importante: equaçao que atualiza a velocidade da particula
+	-velocidade do instante t+1 é a velocidade no instante t somando duas componentes onde existem dois erros
+	-primeira componente: representa a experiencia da particula - b é o melhor posiçao atingida pelo individuo
+	-segundo elemento: partilha social com o bando ou com a vizinhança - representa o melhor global - partilha de informaçao com o enxame
+	-cada componente possui um erro - c1 e c2 - constantes comunitivas de componente social
+	´-fi1 e fi2 - numeros aleatorios entre 0 e 1 que perturbam a diferença na pesquisa
+
+	-existe outra equaçao
+	- a posiçao no instante t+1 é igual a posiçao no instante t mais a componente da velocidade
+
+	Algoritmo
+	-inicializaçao do contador das interaçoes
+	-inicializaçao aleatoria do enxame
+	-avalia-se cada elemento do enxame
+	-enquanto nao for atingido o criterio de paragem, atualiza-se melhores locais e globais, velocidade, posiçao; determina-se o novo enxame, avalia-se o novo enxame e repete-se o ciclo
+
+	-fator omega - de inercia
+		-objetivo: efetuar um compromisso da exploraçao versus especializaçao
+		-começa por ser um valor elevado e é depois decrementado linearmente para um valor mais baixo - assegura o compromisso
+
+	-pode-se fazer uma inicializaçao assimetrica, mais concentrada
+
+	--------------------
+
+	-Algoritmos genéticos
+		começa com k estados gerados aleatoriamente - populaçao
+	-fitness function - função objetivo  -retorna valores mais altos para estados melhores
+
+	--------------------
+
+-Inicializar as posiçoes das particulas dentro do espço, cokm velocidades inicializadas a 0
+-a melhor particula é selecionada

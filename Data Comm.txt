@@ -1,0 +1,73 @@
+enable
+conf t
+hostname RouterA
+ipv6 unicast-routing
+ipv6 route 1111:2222:3333:FFFB::/64 1111:2222:3333:FFF0::1
+ipv6 route 1111:2222:3333:FFFC::/64 1111:2222:3333:FFF0::1
+ipv6 route 1111:2222:3333:FFFD::/64 1111:2222:3333:FFF3::0
+int fa0/0
+ipv6 address 1111:2222:3333:FFFA::0/64
+no shutdown
+int serial 0/1/0
+ipv6 address 1111:2222:3333:FFF0::0/64
+no shutdown
+int serial 0/1/1
+ipv6 address 1111:2222:3333:FFF3::1/64
+no shutdown
+
+
+enable
+conf t
+hostname RouterB
+ipv6 unicast-routing
+ipv6 route 1111:2222:3333:FFFC::/64 1111:2222:3333:FFF1::1
+ipv6 route 1111:2222:3333:FFFD::/64 1111:2222:3333:FFF1::1
+ipv6 route 1111:2222:3333:FFFA::/64 1111:2222:3333:FFF0::0
+int fa0/0
+ipv6 address 1111:2222:3333:FFFA::0/64
+no shutdown
+int serial 0/1/0
+ipv6 address 1111:2222:3333:FFF0::0/64
+no shutdown
+int serial 0/1/1
+ipv6 address 1111:2222:3333:FFF3::1/64
+no shutdown
+copy running-config startup-config
+
+
+enable
+conf t
+hostname RouterC
+ipv6 unicast-routing
+ipv6 route 1111:2222:3333:FFFD::/64 1111:2222:3333:FFF2::1
+ipv6 route 1111:2222:3333:FFFA::/64 1111:2222:3333:FFF2::1
+ipv6 route 1111:2222:3333:FFFB::/64 1111:2222:3333:FFF1::0
+int fa0/0
+ipv6 address 1111:2222:3333:FFFA::0/64
+no shutdown
+int serial 0/1/0
+ipv6 address 1111:2222:3333:FFF0::0/64
+no shutdown
+int serial 0/1/1
+ipv6 address 1111:2222:3333:FFF3::1/64
+no shutdown
+copy running-config startup-config
+
+
+enable
+conf t
+hostname RouterD
+ipv6 unicast-routing
+ipv6 route 1111:2222:3333:FFFA::/64 1111:2222:3333:FFF3::1
+ipv6 route 1111:2222:3333:FFFB::/64 1111:2222:3333:FFF3::1
+ipv6 route 1111:2222:3333:FFFC::/64 1111:2222:3333:FFF2::0
+int fa0/0
+ipv6 address 1111:2222:3333:FFFA::0/64
+no shutdown
+int serial 0/1/0
+ipv6 address 1111:2222:3333:FFF0::0/64
+no shutdown
+int serial 0/1/1
+ipv6 address 1111:2222:3333:FFF3::1/64
+no shutdown
+copy running-config startup-config

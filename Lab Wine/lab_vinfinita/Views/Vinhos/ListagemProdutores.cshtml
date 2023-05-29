@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Produtor>
+
+@{
+    ViewData["Title"] = "Listagem Produtores";
+}
+
+<h2>Listagem de produtores</h2>
+
+<p>
+    <a asp-action="InserirProdutor">Crie um novo produtor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProdutor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProdutor)
+            </td>
+            <td>
+                <a asp-action="ApagarProdutor" asp-route-id="@item.IdProdutor">Apagar produtor</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

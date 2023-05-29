@@ -1,0 +1,30 @@
+﻿@model lab_vinfinita.Models.Tipo
+
+@{
+    ViewData["Title"] = "Inserir Tipo de Vinho";
+}
+
+<h2>Inserir Tipo de Vinho</h2>
+
+<h4>Tipo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InserirTipo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeTipo" class="control-label"></label>
+                <input asp-for="NomeTipo" class="form-control" />
+                <span asp-validation-for="NomeTipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar Tipo" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListagemTipos">Listagem de Tipos</a>
+</div>
+

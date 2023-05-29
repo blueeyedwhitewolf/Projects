@@ -1,0 +1,8 @@
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\bin\Debug\Aula-Threading.exe.config
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\bin\Debug\Aula-Threading.exe
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\bin\Debug\Aula-Threading.pdb
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\obj\Debug\Aula-Threading.csprojAssemblyReference.cache
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\obj\Debug\Aula-Threading.csproj.CoreCompileInputs.cache
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\obj\Debug\Aula-Threading.exe
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\obj\Debug\Aula-Threading.pdb
+C:\Users\tiran\OneDrive - Universidade de Tras-os-Montes e Alto Douro\Engenharia Informatica UTAD\3º Ano\Sistemas Distribuidos\Aula-Threading\Aula-Threading\bin\Debug\wordlist-big-latest.txt

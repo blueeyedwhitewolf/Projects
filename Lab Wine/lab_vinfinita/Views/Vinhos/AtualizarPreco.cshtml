@@ -1,0 +1,31 @@
+﻿@model lab_vinfinita.Models.Vinho
+
+@{
+    ViewData["Title"] = "Alterar Preco";
+}
+
+<h2>Alterar Preco do Vinho</h2>
+
+<h4>Vinho</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AtualizarPreco">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdVinho" />
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Alterar preco" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListagemGarrafeira">Voltar atrás</a>
+</div>
+

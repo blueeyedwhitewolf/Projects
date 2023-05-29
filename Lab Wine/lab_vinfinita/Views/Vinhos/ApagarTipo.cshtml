@@ -1,0 +1,27 @@
+﻿@model lab_vinfinita.Models.Tipo
+
+@{
+    ViewData["Title"] = "Apagar Tipo";
+}
+
+<h2>Apagar Tipo</h2>
+
+<h3>Tem a certeza que pretende apagar este tipo de vinho?</h3>
+<div>
+    <h4>Tipo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeTipo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeTipo)
+        </dd>
+    </dl>
+    
+    <form asp-action="ApagarTipo">
+        <input type="hidden" asp-for="IdTipo" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="ListagemTipos">Voltar atrás</a>
+    </form>
+</div>

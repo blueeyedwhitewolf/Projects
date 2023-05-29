@@ -1,0 +1,4 @@
+DIA	PANORAMA	TEMPERATURA	HUMIDADE	VENTO		JOGAR
+1	Ensolarado - 2	Calor - 2	Alta - 1	Forte - 1	NAO
+2	2		2		1		Fraco - 0	NAO
+3	Chuvoso - 0	Ameno - 1	Normal - 0	0		SIM

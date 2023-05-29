@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h1 id="titulo"> Teste JavaScript</h1>
+
+
+<h3 id="time"></h3>
+
+<div class="alert-danger quadrado" style="height:50px; width:50px;">
+
+</div> <br />
+<div class="alert-danger quadrado" style="height:50px; width:50px;">
+
+</div> <br />
+<div class="alert-danger quadrado" style="height:50px; width:50px;">
+
+</div> <br />
+<div class="alert-danger quadrado" style="height:50px; width:50px;">
+
+</div> <br />
+<div class="alert-danger quadrado" style="height:50px; width:50px;">
+
+</div> <br />
+
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+
+
+        $('.quadrado').on("mouseover", function () {
+
+            if ($(this).hasClass("alert-danger"))
+            {
+                $(this).addClass("alert-success");
+                $(this).removeClass("alert-danger");
+
+            } else {
+                $(this).addClass("alert-danger");
+                $(this).removeClass("alert-success");
+            }
+            
+        });
+
+        $('.quadrado').on("click", function () {
+
+           // alert("Carreguei no quadrado!");
+            if (confirm("Deseja Mudar a cor"))
+            {
+                $('#titulo').addClass('alert-info');
+            }
+        });
+
+        var i = 0;
+        setInterval(function () {
+            $('#time').text(Date().toString());
+
+            if ($('.quadrado').hasClass("alert-danger")) {
+                $('.quadrado').addClass("alert-success");
+                $('.quadrado').removeClass("alert-danger");
+                $('.quadrado').css({ height: '80px', width:'80px'})
+                i = i + 1;
+                console.log(i);
+            } else {
+                $('.quadrado').addClass("alert-danger");
+                $('.quadrado').removeClass("alert-success");
+                $('.quadrado').css({ height: '30px', width: '30px' })
+
+            }
+
+        }, 1000);
+
+        setTimeout(
+            function () {
+                // $('#titulo').hide()
+                $('#titulo').fadeOut(500);
+                $('#titulo').css({ color: 'red' })
+                $('#titulo').fadeIn(500);
+            }
+            , 5000);
+
+
+
+
+
+    </script>
+
+}

@@ -1,0 +1,30 @@
+﻿@model lab_vinfinita.Models.Produtor
+
+@{
+    ViewData["Title"] = "Inserir Produtor";
+}
+
+<h2>Inserir Produtor</h2>
+
+<h4>Produtor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="InserirProdutor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeProdutor" class="control-label"></label>
+                <input asp-for="NomeProdutor" class="form-control" />
+                <span asp-validation-for="NomeProdutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar produtor" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListagemProdutores">Listagem Produtores</a>
+</div>
+

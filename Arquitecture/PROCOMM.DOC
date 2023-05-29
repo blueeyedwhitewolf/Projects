@@ -1,0 +1,5281 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  ProComm (tm)
+
+
+                                   Version 2.3
+
+
+
+
+                            Program Reference Manual
+
+
+
+                                 March 28, 1986
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              PIL Software Systems
+                                  P.O. Box 1471
+                               Columbia, MO 65205
+                               BBS: (314) 449-9401
+
+
+
+
+
+
+
+
+
+          Copyright (c)  1986 PIL Software Systems, Bruce Barkelew and
+          Tom Smith. All Rights Reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    COPYRIGHT
+
+
+          This program  is  copyright  (C)  1985, 1986 by PIL Software
+          Systems, Bruce Barkelew and Tom Smith. All  rights reserved.
+          Non-registered users are granted  a limited  license  to use
+          this  product on a trial  basis, and to copy the program for
+          trial use by others subject to the following limitations:
+
+
+               The program is distributed in unmodified form, complete
+               with documentation.
+
+               No fee, charge or  other consideration  is requested or
+               accepted.
+
+               The program is not  distributed in conjunction with any
+               other product.
+
+
+          If you intend to  use  ProComm  on a  regular  basis, please
+          register and  show your support for the authors. Commercial,
+          business  or  governmental  use  by  non-registered users is
+          prohibited.
+
+
+          Interested in  multiple  copies for  use at  work? Site  and
+          corporate licenses are available. We'd be happy to work with
+          you  to solve your business  communications  needs.  Look in
+          Appendix G for an information request form.
+
+
+
+
+
+
+                                   TRADEMARKS
+
+          ProComm is a trademark of PIL Software Systems.
+
+          Most of the hardware names in  this manual are trademarks or
+          trade names of specific manufacturers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   ii
+
+
+
+          ProComm 2.3                                         Contents
+
+
+
+
+
+          CONTENTS
+
+
+          Preface to Version 2.3  . . . . . . . . . . . . . . . . .  1
+
+          Registration  . . . . . . . . . . . . . . . . . . . . . .  2
+
+          User Supported Software . . . . . . . . . . . . . . . . .  3
+
+          Product Support . . . . . . . . . . . . . . . . . . . . .  4
+
+          Introduction  . . . . . . . . . . . . . . . . . . . . . .  6
+            Program Description . . . . . . . . . . . . . . . . . .  6
+            Machine Requirements  . . . . . . . . . . . . . . . . .  6
+            ProComm Files . . . . . . . . . . . . . . . . . . . . .  7
+
+          Program Features  . . . . . . . . . . . . . . . . . . . .  8
+            Starting the Program  . . . . . . . . . . . . . . . . .  8
+            Terminal Mode . . . . . . . . . . . . . . . . . . . . .  9
+              Terminal Emulations . . . . . . . . . . . . . . . . .  9
+            Communication Parameters  . . . . . . . . . . . . . . .  9
+            Output String Translation . . . . . . . . . . . . . . . 10
+            Setup Screen  . . . . . . . . . . . . . . . . . . . . . 11
+              Modem Setup . . . . . . . . . . . . . . . . . . . . . 12
+              Terminal Setup  . . . . . . . . . . . . . . . . . . . 15
+              Kermit Setup  . . . . . . . . . . . . . . . . . . . . 16
+              General Setup . . . . . . . . . . . . . . . . . . . . 17
+              Host Mode Setup . . . . . . . . . . . . . . . . . . . 19
+              ASCII Transfer Setup  . . . . . . . . . . . . . . . . 20
+            Dialing Directory . . . . . . . . . . . . . . . . . . . 21
+              Searching for an Entry  . . . . . . . . . . . . . . . 22
+              Revising the Dialing Directory  . . . . . . . . . . . 22
+              Deleting Entries  . . . . . . . . . . . . . . . . . . 24
+              Making a Call . . . . . . . . . . . . . . . . . . . . 24
+              Printing the Directory  . . . . . . . . . . . . . . . 25
+            Automatic Redial With Circular Dialing Queue  . . . . . 25
+            File Transfer . . . . . . . . . . . . . . . . . . . . . 26
+              Uploading Files . . . . . . . . . . . . . . . . . . . 26
+              Downloading Files . . . . . . . . . . . . . . . . . . 26
+              File Transfer Protocols . . . . . . . . . . . . . . . 27
+            Translate Table . . . . . . . . . . . . . . . . . . . . 30
+            Command Files . . . . . . . . . . . . . . . . . . . . . 30
+            Host Mode . . . . . . . . . . . . . . . . . . . . . . . 41
+            Chat Mode . . . . . . . . . . . . . . . . . . . . . . . 43
+            Keyboard Macros . . . . . . . . . . . . . . . . . . . . 43
+            DOS Gateway . . . . . . . . . . . . . . . . . . . . . . 44
+            Editor  . . . . . . . . . . . . . . . . . . . . . . . . 44
+            Screen Dump . . . . . . . . . . . . . . . . . . . . . . 44
+            File and Printer Logging  . . . . . . . . . . . . . . . 45
+            Setting Display Colors  . . . . . . . . . . . . . . . . 45
+            Redisplay Buffer  . . . . . . . . . . . . . . . . . . . 46
+            File Directory  . . . . . . . . . . . . . . . . . . . . 46
+            View a File . . . . . . . . . . . . . . . . . . . . . . 46
+            Program Information . . . . . . . . . . . . . . . . . . 46
+
+
+          Copyright (C) 1986 PIL Software Systems                  iii
+
+
+
+          ProComm 2.3                                         Contents
+
+
+
+
+
+            Change Logged Drive or Directory  . . . . . . . . . . . 47
+            Display Elapsed Time  . . . . . . . . . . . . . . . . . 47
+            Clear Screen  . . . . . . . . . . . . . . . . . . . . . 47
+            Hang-up . . . . . . . . . . . . . . . . . . . . . . . . 47
+            Toggle Duplex . . . . . . . . . . . . . . . . . . . . . 47
+            Toggle CR - CR/LF . . . . . . . . . . . . . . . . . . . 48
+            Break . . . . . . . . . . . . . . . . . . . . . . . . . 48
+            Ending a ProComm Session  . . . . . . . . . . . . . . . 48
+
+          Appendix A - Terminal Emulation . . . . . . . . . . . . . 49
+
+          Appendix B - Command Reference Guide  . . . . . . . . . . 60
+
+          Appendix C - Command File Commands  . . . . . . . . . . . 61
+
+          Appendix D - ProComm Utility Programs . . . . . . . . . . 64
+
+          Appendix E - Answers to Commonly Asked Questions  . . . . 65
+
+          Appendix F - ProComm Technical Specifications . . . . . . 68
+
+          Appendix G - Invoice and Order Form . . . . . . . . . . . 69
+
+          Index . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   iv
+
+
+
+          ProComm 2.3                                          Preface
+
+
+
+
+
+                             PREFACE TO VERSION 2.3
+                             ----------------------
+
+
+
+          Changes  to version  2.3 are summarized in the  accompanying
+          file PRCM23.NEW. This manual has been updated to reflect the
+          current status of the product.
+
+          The parm file once again grew. If you are using 2.1 or above
+          don't worry about it, it'll change automatically.
+
+          A number of  script commands  have been added, and some have
+          changed or left. The %YS commands no longer exist.
+
+
+
+
+
+                             PREFACE TO VERSION 2.2
+                             ----------------------
+
+
+          One major  change worth  mentioning here is the switch to an
+          overlay  structure.  This  switch,  coupled  with  extensive
+          enhancements, has resulted in an executable file quite a bit
+          larger  than  that  of  previous  versions. However,  actual
+          memory requirements have been reduced.
+
+          Once again the parameter file has also increased in size. If
+          you are running version 2.1 the .PRM  file will be converted
+          to  the  2.3  format  with  all  of your previously  defined
+          options intact. If you are using earlier versions of ProComm
+          a completely new parameter file will be created.
+
+          Quite a number of script file commands have been changed. It
+          is advised that you  check  all  previously created  command
+          files before relying upon them for unattended operation.
+
+          In  addition, several  keystrokes  for  commands  have  been
+          changed,  most  notably   in  the  terminal  emulations.  We
+          apologize for the inconvenience  this causes, but we felt it
+          was justified in terms of overall funtionality.
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    1
+
+
+
+          ProComm 2.3                                     Registration
+
+
+
+
+
+                                  REGISTRATION
+                                  ------------
+
+
+
+          User feedback is an integral part of any successful software
+          system. Please share  your impression  of ProComm by leaving
+          us a message on our support bulletin board  system with your
+          name,  address, occupation and any  comments  or suggestions
+          you care to pass along. You might also mention where you got
+          the program, and how  you intend to use it. Call us at (314)
+          449-9401. The BBS runs 23 hours a day (4:00am  to 3:00am), 7
+          days a week.
+
+
+          ProComm  is  distributed  as  User-Supported  Software.   We
+          encourage you to try  the program and share it with  friends
+          as long as:
+
+
+               The  program  is  distributed  complete and  unchanged,
+               accompanied by the documentation.
+
+               No fee, charge or compensation is requested or received
+               except by PIL Software Systems.
+
+               ProComm  is not distributed  in  conjunction  with  any
+               other product.
+
+
+          If you use our program on  a regular basis, please show your
+          support by registering. You  may register by sending a check
+          or money order for $25 to:
+
+                              PIL Software Systems
+                                   PO Box 1471
+                               Columbia, MO 65205
+
+          Registered users will receive notification of major releases
+          of ProComm. They will also receive priority treatment on our
+          support  bulletin  board  system,  and   access  to  various
+          restricted  files, programs and  information.  Program disks
+          are not included in the registration fee.
+
+          If you or your company needs an invoice in order to generate
+          payment, one is included in this manual as appendix G.
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    2
+
+
+
+          ProComm 2.3                          User Supported Software
+
+
+
+
+
+                             USER SUPPORTED SOFTWARE
+                             -----------------------
+
+
+
+          User-supported   software  is  a  means  for  the  computing
+          community  to  receive  quality   software   while  directly
+          supporting software authors. It is based on the ideas that:
+
+
+               The value  and utility of  software is best assessed by
+               the user  on his  or her own system. Only after using a
+               program  can  one  really determine  whether  it serves
+               personal applications, needs and tastes.
+
+               The  creation of independent personal computer software
+               can and should be supported by the computing community.
+
+               Copying of programs should  be encouraged, rather  than
+               restricted.  The  ease  with  which   software  can  be
+               distributed  outside  traditional  commercial  channels
+               reflects the  strength,  rather than  the  weakness, of
+               electronic information.
+
+
+          Under the user  supported concept, anyone may request a copy
+          of  a user-supported program  by  sending a blank, formatted
+          disk  to the program  author  together  with  an  addressed,
+          postage-paid  return  mailer.  A  copy of the program, along
+          with  documentation,  will be  sent by  return  mail on  the
+          user's disk.
+
+          The program carries a notice suggesting registration for the
+          program. Registration is voluntary on your part.
+
+          Regardless of  whether  you register,  you are encouraged to
+          copy  and   distribute  the   program   for   the   private,
+          non-commercial use of others.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    3
+
+
+
+          ProComm 2.3                                  Product Support
+
+
+
+
+
+                                 PRODUCT SUPPORT
+                                 ---------------
+
+
+
+          In order to  support our  users, and to provide a  means  of
+          distribution,  we have implemented  a  bulletin board system
+          you can use to communicate with us. If you have questions or
+          comments  just call us up and leave  a  note.  In your note,
+          describe  as completely  as  possible  the  problem  you are
+          having. Let us know your machine configuration, your ProComm
+          configuration and version and any resident  software you are
+          using. Describe what  steps  you  take  before  the  problem
+          occurs, and exactly what the program does when it occurs. If
+          you do  not provide  us  with a complete description  of the
+          problem there is little we can do to help. We'll do our best
+          to keep you up and  running, but if you are not a registered
+          user we do not guarantee to provide support of any kind.
+
+          You'll always be able to find the latest  version of ProComm
+          on  the BBS. The number for our board is (314) 449-9401. The
+          board is operational 23 hours per day, 4:00am-3:00am CST. We
+          are using the Fido BBS Network system from Tom Jennings. You
+          can send  mail to us via FidoNet  at  node #619, region  #14
+          (14/619).
+
+          In addition to our board, several fine  systems always carry
+          the latest version of ProComm. They are:
+
+            Mike Johnson's Computer Aide BBS, Fido #19/329
+            Tulsa, OK. (918) 493-2137
+            2400 baud, 24 hours a day
+
+            John O'Boyle's PConnecticut BBS
+            West Hartford, CT. (203) 521-1991
+            2400 baud, 24 hours a day
+
+            Sal Manaro's Underdog BBS
+            Seattle, WA. (206) 725-9233
+            2400 baud, 24 hours a day
+
+            Ken Shackelford's ATL/FIDO1, Fido #18/1
+            Woodstock, GA. (404) 928-1876
+            2400 baud, 24 hours a day
+
+            Dave Staehlin's TBC BBS
+            Albuquerque, NM, (505) 821-7379
+            2400 baud, 24 hours a day
+
+            Dan Kardell's Rowlett RBBS
+            Rowlett, TX, (214) 475-4598
+            2400 baud, 24 hours a day
+
+            Steve Clancy's WELLSPRING BBS
+
+
+          Copyright (C) 1986 PIL Software Systems                    4
+
+
+
+          ProComm 2.3                                  Product Support
+
+
+
+
+
+            Irvine, CA, (714) 856-7996
+            1200 baud, 5pm-8am M-F, 24 hours weekends
+
+            Larry Trost's Buccaneers Cove TBBS
+            San Jose, CA, (408) 370-9187
+            2400 baud, 24 hours a day
+
+            Mike Todd's IBM/PC SIG
+            The Source
+
+          ProComm is also  found  on  a host  of  other bulletin board
+          systems, user groups and the like.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    5
+
+
+
+          ProComm 2.3                                     Introduction
+
+
+
+
+
+                                  INTRODUCTION
+                                  ------------
+
+
+
+          ProComm is  a general purpose communications program with  a
+          wealth  of  features.  It  was  written  in  "C"  with  some
+          assembler routines  for  optimum  performance.  We  hope you
+          enjoy using it as much as we enjoyed writing it.
+
+
+          PROGRAM DESCRIPTION
+          -------------------
+
+
+          ProComm was designed to provide pleasant  access to the kind
+          of tasks  we thought a  communications program should offer.
+          Included in its features are:
+
+
+               The ability to emulate a number of popular terminals.
+
+               A dialing directory containing one hundred entries.
+
+               Auto  redial facilities  for  connecting with  hard  to
+               reach numbers.
+
+               Several  popular   file  transfer  protocols  including
+               XMODEM, Kermit, Telink and more.
+
+               Command files to control automatic logon and unattended
+               operation.
+
+               A  DOS gateway which allows you to execute DOS commands
+               or other programs while you're still on-line.
+
+               And a host of other goodies including keyboard  macros,
+               disk and printer logging and much much more.
+
+
+          MACHINE REQUIREMENTS
+          --------------------
+
+
+          ProComm requires 128K of available RAM to execute  properly.
+          That's  128K in addition  to  the operating  system  and any
+          resident programs.  It runs under  MS-DOS on the IBM PC, XT,
+          AT  or any  close  compatible. It  may be used with either a
+          color, composite or monochrome display.
+
+          ProComm may have a number of files open at once so make sure
+          that  the FILES parameter in  your CONFIG.SYS file  is large
+          enough.  We  suggest using FILES=15 or greater. Consult your
+          MS-DOS manual for a discussion of the CONFIG.SYS file.
+
+
+          Copyright (C) 1986 PIL Software Systems                    6
+
+
+
+          ProComm 2.3                                     Introduction
+
+
+
+
+
+          PROCOMM FILES
+          -------------
+
+
+          ProComm creates and uses several files. They are:
+
+
+               PROCOMM.PRM     Default parameter file
+
+               PROCOMM.DIR     Dialing directory file
+
+               PROCOMM.KEY     Keyboard macro file
+
+               PROCOMM.XLT     Translate table file
+
+               PROCOMM.HST     Host mode audit trail
+
+               PROCOMM.MSG     Host mode welcome (user created)
+
+
+          ProComm  uses the  environment variable  PROCOMM= to tell it
+          where  to look for  its  files.  It  will first  search  the
+          current directory  for the needed  file. If it is not there,
+          ProComm will search the directory pointed to by PROCOMM=. If
+          it  is found in neither place, and  needs to  be created, it
+          will be created in the directory pointed  to by PROCOMM=. If
+          the environment variable  is not set, files will be  created
+          in the current directory.
+
+          You may set this variable by issuing the DOS command:
+
+               SET PROCOMM=pathname
+
+          where 'pathname' is a fully qualified path name  ending with
+          a  backslash.  You  may  issue this command from either  the
+          command line or from a batch file. For instance, if you have
+          the  command SET PROCOMM=C:\COMM\PROCOMM\  in  your autoexec
+          file,  ProComm will  know  to  look  for  its  files  in the
+          C:\COMM\PROCOMM  directory and  you can use the program from
+          anywhere on  your  system and  have just one  set of ProComm
+          files.
+
+          Clear the environment variable by saying:
+
+               SET PROCOMM=
+
+          Consult  your   MS-DOS  manual  for   more   information  on
+          environment variables.
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    7
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+                                PROGRAM FEATURES
+                                ----------------
+
+
+
+
+
+          STARTING THE PROGRAM
+          --------------------
+
+
+          Begin a ProComm session by issuing the command:
+
+               PROCOMM [/S] [/B] [/Ffilename] [/M]
+
+          Command line switches may appear in  any  order, but must be
+          separated by at least one blank.
+
+          Including  a '/S'  on  the command line  suppresses  ProComm
+          produced sound effects. It does not affect beeps (^G) coming
+          from the remote computer or the alarm function,  nor does it
+          control the modem speaker. You can change the  default sound
+          setting using the setup (ALT-S) screen.
+
+          The '/B' option may be used to run the program in black  and
+          white.  This is useful  for users  with  composite  monitors
+          attached  to color  graphics  display cards.  If the '/B' is
+          omitted ProComm will automatically  adjust itself for either
+          color or  monochrome  operation.  To  make  black  and white
+          operation  the default, begin  a ProComm  session using  the
+          '/B' option.  then save the current  colors using  the ALT-Z
+          facility.
+
+          Specify  '/F' with  a filename  to execute  a  command  file
+          immediately  upon  program   startup.  Command   files   are
+          described later in this chapter.
+
+          The '/M'  option sets  ProComm to  perform  screen  displays
+          using BIOS  calls, rather than direct screen writes. This is
+          useful for  running  under  multi-tasking operating systems.
+          Screen write method  is  also selectable  through the  setup
+          facility.
+
+          When  the program  begins it displays  the ProComm logo  and
+          copyright  notice,  and  possibly  the  program  information
+          screen. This brief commercial occasionally  presents  itself
+          the  first few times  you  use  the  program.  You  can also
+          display the information screen using the ALT-I command.
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    8
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          TERMINAL MODE
+          -------------
+
+
+          After the opening  display  and the  initialization  of  the
+          program,  you  are  left  in  terminal mode.  Most  of  your
+          communicating will  take  place here. The bottom line of the
+          screen is  reserved  for messages but the rest of the screen
+          is  open  for  use. Most ProComm  features are  called  from
+          terminal mode. They are usually executed from a window which
+          leaves your original screen intact. Press ALT-F10 for a list
+          of  available  commands.  You  may  then  select  an  option
+          directly from the help screen.
+
+
+          Terminal Emulations
+          -------------------
+
+
+          Most  keyboard and screen functions  will operate locally as
+          you expect them  to.  What  they  do  on the remote computer
+          depends on which  terminal emulation you are  using. ProComm
+          currently supports ten popular terminal configurations:
+
+
+                              - IBM 3101
+                              - DEC VT-100
+                              - DEC VT-52
+                              - Televideo 910/920
+                              - Televideo 925/950
+                              - Lear Siegler ADM-3/5
+                              - Heath/Zenith 19
+                              - ANSI-BBS
+                              - ADDS Viewpoint
+                              - Wyse 100
+
+
+          To change the emulation  in use,  select TERMINAL SETUP from
+          the setup screen (ALT-S).
+
+          Consult appendix A for a list of the functions supported for
+          each terminal.
+
+
+          COMMUNICATION PARAMETERS
+          ------------------------
+
+
+          ProComm supports a variety of communications configurations.
+          You  may select baud rate, the number of data and stop bits,
+          parity  and  duplex.  The  program  defaults   to  300  baud
+          operation, with 8  data bits, 1 stop bit, no parity and echo
+          off (full duplex).
+
+
+
+          Copyright (C) 1986 PIL Software Systems                    9
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Use  the ALT-P  command to review or change  the active line
+          control   parameters.  After   opening   the   Communication
+          Parameter  window, ProComm  displays  the current  settings.
+          Enter  a number from  1  to 12 to  change  to  a  predefined
+          setting. Use  the numbers  13 thru  19 to setup a customized
+          configuration. Enter 20 to select COM1  as your active port,
+          or 21 to use COM2.
+
+          Use the save option (22) to make the  new configuration your
+          default. If you change the parameter settings without saving
+          them  to disk,  they  will  only  be  used  for the  current
+          session.
+
+          Press ESC to return to terminal mode. The new parameters are
+          now in affect.
+
+
+          OUTPUT STRING TRANSLATION
+          -------------------------
+
+
+          There  are several situations in which ProComm will  perform
+          translation on strings sent to  the modem. These include the
+          modem  initialization string,  the  modem  command,  dialing
+          directory  numbers,  long  distance  codes,  keyboard  macro
+          strings,  and  the  %T,  %N  and  %J  script  commands.  The
+          translation allows you to send carriage returns, escapes and
+          other control characters to the  modem, and  also provides a
+          pause feature.
+
+          ProComm  manages this  by providing  translation  characters
+          which   can  be  specified  in  the  general  setup  screen.
+          Characters are provided for CR, ESC, CTRL-char and pause.
+
+          The  default CR  translation  character  is  the exclamation
+          point  ('!').  Anytime  that  ProComm   encounters   the  CR
+          translate character in one of the above mentioned strings it
+          replaces  that  character with a CR (ASCII 13). To  send the
+          character without translation use two of them together.  For
+          instance, in the default case where  '!' is the CR translate
+          character, a keyboard  macro set  to 'PASSWORD!'  sends  the
+          string 'PASSWORD'  followed by a carriage return. A keyboard
+          macro  set to 'GO AWAY!!' will be translated  as 'GO AWAY!'.
+          Since two of  the characters  in a row are translated as the
+          true character, some other  method is necessary to  send two
+          adjacent  carriage  returns.  You  can  do  this  using  the
+          CTRL-char translation  described below. For instance, if the
+          CTRL translate character  is  set  to the  caret  ('^')  the
+          string '^M^M' is  translated as  2 carriage returns (because
+          CTRL-M is a CR).
+
+          The  default ESC  translation character  is the vertical bar
+          ('|').  Anytime that  ProComm encounters  the ESC  translate
+          character in one of the above mentioned strings  it replaces
+
+
+          Copyright (C) 1986 PIL Software Systems                   10
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          that character with an ESC (ASCII 27). To send the character
+          without  translation use two of them together. For instance,
+          in   the  default  case  where  '|'  is  the  ESC  translate
+          character,  a keyboard  macro set to '|[2J'  sends the VT100
+          command  for clear screen (ESC [ 2 J). A  keyboard macro set
+          to '|| box ||' will be translated as '| box |'. Since two of
+          the  characters   in  a  row  are  translated  as  the  true
+          character,  some  other  method is  necessary  to  send  two
+          adjacent  escapes.  You  can  do  this  using the  CTRL-char
+          translation  described  below. For  instance,  if  the  CTRL
+          translate  character is  set  to the caret ('^') the  string
+          '^[^[' is translated as 2  escapes  (because  CTRL-[  is  an
+          ESC).
+
+          The  CTRL  character translation is  slightly  different. In
+          this  case  the  CTRL  translate  character  is  a  lead  in
+          indicator that the following character should be interpreted
+          as  a CTRL character. For instance, using  the  default CTRL
+          translate character '^' the string '^C' would be interpreted
+          as  a  CTRL-C  (ASCII  3).  Again,  2  translate  characters
+          together are treated as the actual character, so '^^C' would
+          be translated  as  '^C' (the  caret character  followed by a
+          capital C).
+
+          The final translate character provided is the pause. If this
+          character  is encountered  during translation,  ProComm will
+          pause for 1/2 second before doing anything else. The default
+          translate pause character  is the tilde  ('~'). This  one is
+          different  from the  other translate characters  in  that  2
+          pause characters  together cause  a 1 second pause; they are
+          NOT interpreted as  the  single  character. If  you  wish to
+          actually  send that character you must change  the setup for
+          the pause translate character.
+
+          Notice the difference between the translate  pause character
+          and a modem pause  character. The  translate pause character
+          causes a pause in characters being sent to  the  modem. This
+          is appropriate for pauses  around a modem escape code, as in
+          a  hang-up  string,  or to  allow the  modem  to  respond to
+          something before  continuing. A  modem pause character, such
+          as  the  comma  used by Hayes, causes a  pause in characters
+          sent from the modem to the phone line. It is appropriate for
+          waiting  for second  dial tones  and  such, as when  you are
+          dialing out  through a  PBX or office  phone system. The two
+          are NOT the same and should not be confused.
+
+
+          SETUP SCREEN
+          ------------
+
+
+          ProComm allows  you  to  define  many of your  own power  up
+          defaults  for  system  parameters.  You can  also  change  a
+          setting temporarily, and  go back to  your defaults for  the
+
+
+          Copyright (C) 1986 PIL Software Systems                   11
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          next  session.  To  access the setup  routine,  press ALT-S.
+          Setup is currently  divided  into 6  sections:  modem setup,
+          terminal setup, Kermit setup, general setup, host mode setup
+          and ASCII file transfer setup.
+
+          Select a section by typing  its number  and pressing return.
+          You will be presented  with a screen containing  the current
+          defaults for that section.  To change a  setting,  enter the
+          number of the parameter followed by  a  CR.  Then  make your
+          change.  If, after selecting a parameter, you  decide not to
+          change it,  simply  press ESC. The current value will remain
+          unchanged.
+
+          If the  parameter chosen requires a  string, simply  type in
+          the  characters for the  new  string followed  by a carriage
+          return. Pressing CR  without typing any  characters will set
+          the string to null.
+
+          Some parameters offer you a selection of valid values. Press
+          the space bar to  rotate between values.  When the value you
+          desire is displayed, press CR to accept it.
+
+          If the parameter  requires a  number,  enter the number  and
+          press return.  ProComm will  check to  make  sure  that  the
+          number falls within a valid range.
+
+          To exit a setup section, press ESC. If  you wish to save the
+          changes  you have to  disk,  select option 5  from  the main
+          setup option list.  If you  select  this option the  current
+          settings will  become your  power-up default. If  you do not
+          save the setup, the changes you have made will be in  effect
+          for only the current ProComm session.
+
+          To exit the main setup screen press ESC.
+
+
+          Modem Setup
+          -----------
+
+
+
+          Modem Initialization String
+
+          This is  the string sent to the modem every time you begin a
+          ProComm session. It  may be up  to 46 characters  in length,
+          and may contain carriage returns or control characters using
+          the translate conventions described in the section on output
+          string  translation.   Modem  initialization   strings  vary
+          between different types of modems. The default is configured
+          for  a Hayes  or compatible modem. It is 'AT E0 S7=60 S11=55
+          S0=0 V1 X1', where
+
+               AT      is the command prefix
+               E0      sets modem echo of commands off
+
+
+          Copyright (C) 1986 PIL Software Systems                   12
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+               S7=60   wait max 60 seconds for carrier
+               S11=55  touch tone spacing (fast)
+               S0=0    turn off auto answer
+               V1      verbal result codes
+               X1      extended result codes
+
+          The initialization  string  may  be  tailored  to  suit your
+          particular  modem and  needs. Consult your  modem manual for
+          details regarding  the operation and available commands  for
+          your modem.
+
+          Dialing Command
+
+          The dialing command is  used to instruct the modem to dial a
+          number.  It is  sent  to  the modem  by  the dial  or redial
+          functions,  followed  by  a  number  to  dial and  any  long
+          distance codes  you  might  specify. The default  is  'ATDT'
+          where:
+
+               AT      is the command prefix
+               D       is the dial command
+               T       turns on touch tone dialing
+
+          The modem  dialing command may contain imbedded pauses, CRs,
+          ESCs and CTRL  characters using the conventions described in
+          the section on output string translation.
+
+          Connect String
+
+          This is the message  your modem sends to ProComm to indicate
+          that  a   connection  has  been  achieved.  It  defaults  to
+          'CONNECT'.  ProComm uses  this  value during auto  redial to
+          determine  when  a connection has been  made. Note that this
+          parameter must be  set correctly  (including  case) for  the
+          redial (ALT-R) feature to work.
+
+          Modem No Connect Strings
+
+          These strings are also used by the auto redial feature. They
+          should  be  set to  modem  messages  that  indicate  that  a
+          connection  was  not  achieved.  The  defaults  are  'BUSY',
+          'VOICE' and  'NO CARRIER'. Again, they must be exact matches
+          to  the messages your modem  displays, including case.  Some
+          modems  do   not   support  these  extended  call   progress
+          monitoring features.
+
+          Hang-up String
+
+          The hang-up string is the command to be sent to the modem to
+          cause it to hang up. ProComm first  attempts to  hang-up  by
+          dropping the Data Terminal Ready (DTR) line. If that is  not
+          successful  it  will  send  this string  to  the modem.  The
+          default,   set   up   for   Hayes   and    compatibles,   is
+          '~~~+++~~~ATH0!', where:
+
+
+          Copyright (C) 1986 PIL Software Systems                   13
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+               ~~~     is a 1 1/2 second delay
+               +++     is the modem escape sequence
+               ~~~     is a 1 1/2 second delay
+               AT      is the modem command prefix
+               H0      is the hang-up command
+               !       sends a CR
+
+          The '~'  and '!'  characters are translated  by ProComm, not
+          the modem  (see the section on output  string  translation).
+          The '+++'  surrounded by the 1  1/2 second pauses causes the
+          modem to go into command state, where the hang-up command is
+          then issued. For more  information  see  the section on  the
+          ALT-H command.
+
+          Redial Timeout Delay
+
+          This is the number of seconds that ProComm will wait, during
+          a redial,  for a  connect  or no  connect response  from the
+          modem.  If the  timeout  delay is exceeded  before  a  modem
+          response is received, ProComm will cycle and attempt another
+          redial. This value may  also be modified on the fly during a
+          redial attempt.  See  the  section  on  re-dialing for  more
+          details.
+
+          Redial Pause Delay
+
+          The redial pause delay is the number of seconds that ProComm
+          will  pause  between  each dialing attempt during  a redial.
+          This  is needed  by some modems to reset  between calls. The
+          default, and the minimum pause time, is 1 second.
+
+          Modem CD Mask
+
+          The  modem  Carrier  Detect  mask  is  used  by  ProComm  to
+          determine whether or not a hang-up has  been successful. The
+          default  value  is  32.  It  may  be necessary  for  you  to
+          experiment  with  this  parameter in order  to determine the
+          correct  value.  Values  tried  should  powers  of  2,  i.e.
+          16,32,64 and 128. In general, if the hang-up command (ALT-H)
+          correctly reports the results of  the  hang-up attempt, then
+          the  CD  mask  is   correct.  If  the  hang-up  attempt  was
+          successful, but reports that the call  was not disconnected,
+          or vice versa, then the CD mask is  incorrect. The following
+          values may be used as guidelines, although cabling and other
+          considerations may make them inaccurate:
+
+               16      Hayes external, Prentice POPCOM
+               32      USR Courier, Cermetek Security Modem
+               128     Hayes internal, Qubie, USR Password
+                       Rixon R212A
+
+          See  the  section on  the hang-up  (ALT-H) command for  more
+          details.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   14
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Terminal Setup
+          --------------
+
+
+
+          Terminal Emulation
+
+          Use  this parameter  to  select  the  terminal  you wish  to
+          emulate. After selecting option 1, press the space bar until
+          the  terminal desired is displayed. Then  press  CR  to make
+          that  the  current emulation. Take care to  insure that  the
+          rest  of  the  settable  terminal  parameters match what  is
+          expected  for the terminal type you select.  For general BBS
+          work ANSI-BBS is suggested.
+
+          Duplex
+
+          Control the default duplex setting here.  Your  choices  are
+          full duplex (no echo) and half duplex (local echo).  If what
+          you  type is not displayed  on  the  screen, try using  half
+          duplex. If  you see  two  of every  character you type, give
+          full duplex a shot.
+
+          Handshake
+
+          There is currently  only 1  handshake  that  is available to
+          ProComm users:  XON/XOFF. If you desire  to  use handshaking
+          set this  option to XON/XOFF, otherwise select NONE. ProComm
+          performs  XON/XOFF  at  the   interrupt  level.  To  prevent
+          deadlock due  to  extraneous  XOFFs  caused  by  line  noise
+          ProComm allows you to reset the XOFF flag. If you ever see a
+          message on  the  status  line  that  indicates  an XOFF  was
+          received,  and you don't  think it is  valid,  just hit ESC.
+          That will  clear  the XOFF  flag and  allow you to  continue
+          work.
+
+          Incoming Carriage Return Translation
+
+          Use this to set the power  up default for  incoming carriage
+          return translation  Some systems  send only a CR  and expect
+          you to provide the line feed,  while others send both the CR
+          and LF.  If this  parameter is set to  CR, incoming carriage
+          returns  are  left  alone.  If  set to  CR/LF,  any carriage
+          returns  received  from the  remote  will  have  a line feed
+          appended  to  them  by   ProComm.   Most   TTY  applications
+          (including most BBSs) send both the carriage return and line
+          feed, so the  ProComm default  is CR.  You can  change  this
+          setting on the fly without affecting the default  using  the
+          ALT-F3 command.
+
+          Outgoing Carriage Return Translation
+
+          Use  this to set  the power up default for outgoing carriage
+          return translation Some systems need only  a CR,  and others
+
+
+          Copyright (C) 1986 PIL Software Systems                   15
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          desire a CR/LF combination.  If this parameter is set to CR,
+          outgoing  carriage returns are left alone. If  set to CR/LF,
+          any carriage  returns sent  to the  remote will have a  line
+          feed appended to them by ProComm.
+
+          BS Translation
+
+          The   backspace   (BS)   keystroke   can   have    different
+          interpretations depending  upon  the terminal  type. In most
+          cases it is destructive, that  is the cursor will delete the
+          character to the  left  when it moves there.  In some cases,
+          the VT100 for instance,  the BS behaves  like a  cursor left
+          command.  You  may  choose the  correct  behavior  for  your
+          application using  this parameter. The  ProComm  default  is
+          destructive.
+
+          Line Wrap
+
+          The line wrap setting  controls how lines  greater  than  80
+          characters  are  handled.  If set on, those lines will  wrap
+          around  and be displayed on the next  line.  With  line wrap
+          off,  lines  greater  than 80 characters in  length  will be
+          truncated. The ProComm default is line wrap off.
+
+          Scroll
+
+          The  scroll  parameter  controls  what  happens  if  ProComm
+          receives a  CR (or CR/LF) while  the cursor is positioned in
+          the bottom line. If scroll is on, the screens scrolls 1 line
+          and the  new line can be  printed.  If  scroll is  off,  the
+          cursor returns  to the left most  column, and  the  new line
+          over prints  the old.  Normally this will always be  set on.
+          For some  full screen  applications you may need  to inhibit
+          screen scrolling.
+
+          Answerback
+
+          Some  systems send  an ENQ  control character  (CTRL-E)  and
+          expect an identifying sequence to be returned. If ANSWERBACK
+          is set ON,  ProComm will  respond to  a received  CTRL-E  by
+          sending the keyboard macro assigned to  ALT-0. If ANSWERBACK
+          is OFF, the CTRL-E will be ignored. As CTRL-E can be a valid
+          graphics  character   on  the  IBM  PC,  ANSWERBACK  is  not
+          supported while in ANSI-BBS terminal emulation mode.
+
+
+          Kermit Setup
+          ------------
+
+
+          We  have  provided  control  over  a number  of Kermit  file
+          transfer parameters. This is not the place, however, to give
+          a Kermit  tutorial. If  you do not know what  these are, you
+          should  leave  them  as   they  are.  Consult   the   system
+
+
+          Copyright (C) 1986 PIL Software Systems                   16
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          administrator for  your remote  if you  have  any  questions
+          regarding their Kermit installation.
+
+          A further discussion of  ProComm's  Kermit implementation is
+          available in the file transfer section.
+
+
+          General Setup
+          -------------
+
+
+
+          Editor Name
+
+          This parameter  can be set to the name of an editor  or list
+          program you wish to use from within ProComm. You may specify
+          it    as    a    complete   filename    with   path    (i.e.
+          C:\WP\EDIT\EDITOR.EXE),  just   the  program   name  without
+          extension (i.e. EDITOR) or  anything in between. If  no path
+          is specified, ProComm will search  the directories specified
+          in the environment variable PATH for the indicated file. You
+          must have enough available RAM to load the desired program.
+
+          Default Log File
+
+          Use this  parameter to  set the default name for the file to
+          be used when file logging is in effect. If  the file exists,
+          new  data will be appended to its end. If the  file does not
+          exist it will be created in the current directory.
+
+          Default Screen Dump File
+
+          This option names  the file to which to append screen dumps.
+          If  it  does  not exist when ALT-G is  pressed  it  will  be
+          created in the current directory.
+
+          Screen Write Method
+
+          ProComm can use one of two different methods to perform  its
+          screen writing. Normally you  would use DIRECT screen writes
+          for  speed.  In  some cases,  such  as  under  multi-tasking
+          operating systems, you might wish to go through the BIOS for
+          screen writing. You may also select BIOS mode using the '/M'
+          command line option.
+
+          Translate Table
+
+          This  setting  controls  whether  or  not   translate  table
+          conversion is performed. Selecting YES causes the  translate
+          table  to be activated  immediately, as  well  as on program
+          startup.  The translate  table may  be  defined  and toggled
+          on/off using the ALT-W command as well.
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   17
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Sound Effects
+
+          The  sound  effects   option   controls  the  existence   or
+          suppression of ProComm sound effects. This setting  controls
+          the window opening  and closing  noises primarily, and  does
+          not  effect the alarm, the modem or bells (^G) sent from the
+          host.
+
+          Alarm Sound
+
+          This  setting controls  whether or not  the alarm uses sound
+          effects. The alarm  is  used to  indicate  the end  of  file
+          transfers, connects  during re-dials  and by the  %A  script
+          command. If alarm sound is ON,  these events will trigger an
+          alarm clock like ringing which will continue  for the number
+          of seconds specified by the alarm time below. If alarm sound
+          is OFF, the appropriate message will flash for the indicated
+          time but will be silent.
+
+          Alarm Time
+
+          Set this to the time (in seconds) that you wish the alarm to
+          sound. For instance, if you desire to have the file transfer
+          alarm ring for two minutes, set this to 120.
+
+          Exploding Windows
+
+          Beginning  with version 2.2  you  may  select what  type  of
+          windows  you wish ProComm to use.  By selecting YES for this
+          option you instruct  ProComm to use exploding windows, as it
+          did  in  previous versions. Selecting  NO causes windows  to
+          just appear without the expanding frames.
+
+          XMODEM Mode
+
+          Some remote  systems, such  as CompuServe, cannot handle the
+          normal  XMODEM  error timings. For these  systems,  set  the
+          XMODEM  mode to RELAXED to avoid file transfer aborts due to
+          timing  errors.  In most  cases  this should be  be  set  to
+          NORMAL.
+
+          Translate Pause Character
+
+          Use this  parameter to set  the  character which  is  to  be
+          interpreted as a pause during output string translation. See
+          the section on output string translation for more details.
+
+          Translate CR Character
+
+          Use  this  parameter to set  the character  which  is  to be
+          interpreted  as  a  carriage  return  during  output  string
+          translation. See  the  section on output string  translation
+          for more details.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   18
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Translate CTRL Character
+
+          Use  this  parameter  to set the character  which  is  to be
+          interpreted  as signaling a control  character during output
+          string  translation.  See  the   section  on  output  string
+          translation for more details.
+
+          Translate ESC Character
+
+          Use this parameter to  set  the  character  which  is to  be
+          interpreted as an ESC  during output string translation. See
+          the section on output string translation for more details.
+
+          Aborted Download
+
+          Use  this setting to determine the disposition of files that
+          are aborted during downloads. If  set to KEEP, these partial
+          files are kept on  the disk and  are your responsibility. If
+          set to DISCARD,  they  are erased  from  your  disk when the
+          download aborts.
+
+
+          Host Mode Setup
+          ---------------
+
+
+
+          Host ID String
+
+          The host ID string is a message sent to the remote caller to
+          identify  your system. It can be set to anything you desire.
+          Be sure  to include a CR translation character at the end if
+          you want one sent.
+
+          Auto Answer String
+
+          The  auto  answer  string  can  be  thought of  as  a  modem
+          initialization  string for use with the host mode. Use it to
+          set the  modem  to answer  correctly for  auto  answer.  The
+          default string is '~~~+++~~~ATS0=1', where
+
+               ~~~     is a 1 1/2 second pause
+               +++     drops the modem into command state
+               ~~~     is a 1 1/2 second pause
+               AT      is the command prefix
+               S0=1    sets modem to answer after one ring
+
+          Host Mode Password
+
+          This  is the password that  remote callers will have to know
+          in  order to log onto  ProComm  in  host mode. Callers  must
+          match  it completely including case. If you set this to null
+          then callers  can get through the password by just  pressing
+          RETURN.
+
+
+          Copyright (C) 1986 PIL Software Systems                   19
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          DOS Shell Password
+
+          This is a secondary password  that  callers must know  to be
+          allowed access to the remote DOS shell. Be very careful with
+          this as you do not  want just anyone to have  access to  the
+          DOS level on your machine.  You should not leave this blank,
+          and you probably should not leave it at the default.
+
+
+          ASCII Transfer Setup
+          --------------------
+
+
+
+          Echo Locally
+
+          Use  this setting to control whether or not  ProComm  echoes
+          locally what  is  being transferred during ASCII uploads. In
+          most cases set this  to NO  and let the host due any echoing
+          desired.
+
+          Expand Blank Lines
+
+          If set  on will  cause ProComm to  expand blank lines (lines
+          containing only  a CR or CR/LF)  to include a space. This is
+          useful when uploading text to systems that interpret a blank
+          line to mean "end of text".
+
+          Pace Character
+
+          This is one  option for line pacing while uploading. If  set
+          to a value other than 0, ProComm will send  a  line and then
+          wait to receive the specified  character  before sending the
+          next line. Enter  the decimal value for the  ASCII character
+          desired; for instance, use 13 for a carriage return.
+
+          Character Pacing
+
+          You can cause ProComm to wait between each character sent in
+          an ASCII upload  using  this parameter.  If set  to a  value
+          other  than 0, ProComm will send  a character and  then wait
+          the specified number  of milliseconds (1/1000 second) before
+          sending another  character. Character pacing  may be used in
+          conjunction with any of the other pacing options.
+
+          Line Pacing
+
+          ProComm performs line pacing during ASCII uploads if you  so
+          desire. After each line  is sent the  program  will wait for
+          the time specified  here (in 1/10 of seconds) before sending
+          the next line. Pacing  may be  set to  zero if the  host can
+          handle it.
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   20
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          CR Translation (uploads)
+
+          This option  controls outgoing CR translation  during  ASCII
+          upload.  You have 3 options. If  set to NONE, no translation
+          is  performed.  If  set  to  STRIP,  all  carriage   returns
+          encountered in the file being  uploaded are stripped. If set
+          to  ADD LF,  a  line feed  will  be  added to  all  outgoing
+          carriage returns.
+
+          LF Translation (uploads)
+
+          This option  controls outgoing LF  translation  during ASCII
+          upload. You have 3  options. If  set to NONE, no translation
+          is performed. If set to STRIP, all line feeds encountered in
+          the  file being uploaded are  stripped. If set to  ADD CR, a
+          carriage return will precede all outgoing line feeds.
+
+          CR Translation (downloads)
+
+          This option  controls incoming CR  translation during  ASCII
+          downloads.  You  have  3   options.   If  set  to  NONE,  no
+          translation is  performed. If  set  to  STRIP,  all carriage
+          returns encountered  in the file being received are stripped
+          If set to ADD LF, a line feed  will be added to all incoming
+          carriage returns.
+
+          LF Translation (downloads)
+
+          This  option  controls incoming  LF translation during ASCII
+          downloads.  You   have  3  options.  If  set  to  NONE,   no
+          translation  is performed. If set  to STRIP, all  line feeds
+          encountered in the file  being  downloaded are  stripped. If
+          set to ADD CR, a carriage return  will be added in  front of
+          all received line feeds.
+
+
+          DIALING DIRECTORY
+          -----------------
+
+
+          The ProComm dialing directory automates most of your dialing
+          tasks. The directory holds information for  100 of your most
+          often called systems. The information  includes the name and
+          phone number, as well the communications parameters specific
+          to that  entry.  Also included  in the  directory is a  user
+          definable modem command  and up to  four long distance codes
+          that you can use with  alternate long-distance services. You
+          can even link command files to dialing directory entries  to
+          provide custom  setup  configurations  or  to perform  logon
+          sequences automatically.
+
+          Press ALT-D to access  the dialing  directory. A  window  is
+          opened  that  displays  pages of 10 entries at a  time.  The
+          current  modem command is  displayed at the bottom left, and
+
+
+          Copyright (C) 1986 PIL Software Systems                   21
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          the  active long  distance codes are indicated to the right.
+          Long distance codes are  identified  by the characters  '+',
+          '-', '@' and '#'. The modem command defaults to 'ATDT'.
+
+          Use the PGUP  and PGDN keys to display the previous or  next
+          page of entries.  The up and down arrow keys will scroll the
+          display one entry  in  either direction. The  HOME key  will
+          position the display at the  first  page in  the  directory,
+          while the END key will position you at the  last page. Press
+          ESC to exit the dialing directory.
+
+
+          Searching for an Entry
+          ----------------------
+
+
+          Version  2.2  adds  a   search  capability  to  the  dialing
+          directory. To look for a particular entry  press 'F' or '/'.
+          A  window will open asking for the text to search for. Enter
+          the string you wish  to be found and press CR.  ProComm will
+          search  the name and number fields for the  string provided.
+          If the string is found the dialing  directory will scroll to
+          the  page  containing  that entry,  and the  entry  will  be
+          highlighted.
+
+          Searching  in the dialing directory is  not case  sensitive.
+          For instance a  search  string of 'abcd' will  match 'abcd',
+          'ABCD',  'AbCd'  or any other  mix  of upper and lower  case
+          characters.  If the  search routine reaches  the end  of the
+          dialing  directory  without  finding  a match it  will  wrap
+          around to  the  beginning of the directory and  continue its
+          search until it has checked every entry once.  If the string
+          is still not found  a message  is  displayed.  To  repeat  a
+          search for the same text, press 'F' or '/' a second time and
+          then immediately press CR.
+
+
+          Revising the Dialing Directory
+          ------------------------------
+
+
+          When you first use the dialing directory most of the entries
+          will  be  cleared to  the default. The name and phone number
+          fields will be filled with periods; the default baud rate is
+          1200, with no parity, 8 data bits, 1 stop  bit  and echo off
+          (full duplex). To  add  an entry  to the  directory,  or  to
+          change  an existing entry, enter 'R'  at the '==>' prompt. A
+          window will appear asking for the entry to revise. To revise
+          an entry type the number  of the entry to revise (1-100). To
+          revise  the  modem  command enter  'M';  to  revise  a  long
+          distance  code  enter  the  long  distance  code  identifier
+          (-,+,@,#).
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   22
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Adding or Revising an Entry
+
+          If  you chose to revise an entry the current values for that
+          entry are  displayed. You are  prompted first  for the name.
+          Enter up to  24 characters.  You  can use the backspace  and
+          left arrow keys  to edit  your entry. Press  CR when you are
+          done. Pressing CR  without making any changes will leave the
+          current name intact. You will  now be prompted for the phone
+          number. Enter only the numbers you need; the number  will be
+          right justified  on the page. Press CR when you are finished
+          entering the number. The current baud rate is now displayed.
+          Press  any key  (except ESC) to rotate through the available
+          baud rates. Press  CR to  select the  one you  want. Use the
+          same  technique to select the parity,  data  bits, stop bits
+          and echo.  You  will now  be prompted for  a command file to
+          link to the entry. Enter the filename without any  extension
+          or path. To clear an existing command file type  a space and
+          then RETURN. If you don't want to link a  command file press
+          RETURN without specifying  a filename. The same command file
+          may be linked to any number of dialing directory entries.
+
+          After specifying the command file, you will be asked whether
+          to  save the entry to  disk. Enter 'Y' to save your changes,
+          'N' to abandon. You may also abandon a revision at any point
+          by pressing ESC. After saving an entry it is written to disk
+          and the  current  page  redisplayed.  An entry  need not  be
+          displayed to be revised.
+
+
+          Revising the Modem Command
+
+          If you specified 'M' to revise the modem command the current
+          command  is   displayed.  Enter   a   new  command  that  is
+          appropriate for your modem. You may imbed pauses,  CRs, ESCs
+          or  control  characters  in  the  modem   string  using  the
+          procedure   described  in  the  section   on  output  string
+          translation. Press RETURN when you are done entering the new
+          command.  Pressing  RETURN as  the  first  character of  the
+          string will clear the command to blanks.
+
+          Now indicate  if the new command should be saved to disk. If
+          you enter 'Y' the new command is written to disk and will be
+          used in  future executions of  ProComm.  If you say 'N'  the
+          changes will remain for the current session only. To abandon
+          the  changes  completely press  ESC  any  time  previous  to
+          answering the save prompt.
+
+          Any  changes  you  make  are  immediately reflected  in  the
+          window.  You may also revise the dialing command through the
+          setup facility described earlier.
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   23
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Adding or Revising Long Distance Codes
+
+          Long  distance codes  are  mainly  used  to access alternate
+          long-distance   services.  Four   long  distance  codes  are
+          provided; they  are identified  by the  characters '-', '+',
+          '@' and '#'. Press 'P'  at the dialing directory prompt '==>
+          '  to display the current long distance codes. Press any key
+          to remove the long distance code window.
+
+          To revise a long distance code, enter the long distance code
+          identifier  when  prompted  for the  entry  to  revise.  The
+          current string for that long  distance code is displayed and
+          you are  asked for  the new  entry.  Control  characters and
+          carriage returns are allowed in long distance codes by using
+          the same  conventions  as in the modem command. Press RETURN
+          to complete the long distance code revision. Pressing RETURN
+          as the  first character in  the new string deletes that long
+          distance code. As with the modem command, if you specify not
+          to save the  changes they will be in effect for the  current
+          session  only.  Press ESC  to  abandon  long  distance  code
+          changes completely.
+
+
+          Deleting Entries
+          ----------------
+
+
+          You  can use  the 'D'  command to delete  entries  from your
+          dialing  directory.  A window  will  prompt for  a range  of
+          entries to delete. Leave the second field blank to  delete a
+          single entry.  You'll be asked  to verify that  you want the
+          entries deleted before any action is taken.
+
+
+          Making a Call
+          -------------
+
+
+          To dial an entry in your dialing directory, simply  type the
+          entry's number at  the '==> '  prompt.  To dial with a  long
+          distance code,  place the  code's  identifier  before and/or
+          after  the  number.  For example, enter '14' to  dial  entry
+          number 14.  Enter '#37' to dial entry  number 37 preceded by
+          the long  distance  code identified  by '#'. Enter '34+'  to
+          dial entry number 34 followed by the '+' long distance code.
+          ProComm will  send  the  modem  command,  an  optional  long
+          distance  prefix,  then the  number  and  an  optional  long
+          distance suffix  to the  modem. All  four  of  parts of  the
+          dialing  string   are  translated   using   the  conventions
+          described under  output  string translation.  The parameters
+          for the dialed entry become the current settings and  remain
+          after the call is complete.
+
+          If a  command file is linked to the entry being  dialed, the
+
+
+          Copyright (C) 1986 PIL Software Systems                   24
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          redial facility will be used. When a  connection is  reached
+          control is passed  to  the linked command file. This can  be
+          very  useful for setting up  custom terminal configurations,
+          performing automatic logons and much more.
+
+          To  dial a  number not  in  your  directory  use  the manual
+          dialing  command  ('M'). Then  enter the number you  wish to
+          dial. ProComm will send  the dialing command plus the string
+          you entered. A long distance code  indicator may be used  if
+          it is the first or last character in the string.
+
+
+          Printing the Directory
+          ----------------------
+
+
+          ProComm  lets you output your  directory  to a printer, disk
+          file or any DOS device.  Type 'L'  at the  '==> ' prompt and
+          then specify where  to send the file. Simply press RETURN to
+          use  the default  of  PRN (LPT1:). You  can even  output the
+          directory to the COM port you are using to send a listing of
+          your directory to the remote computer.
+
+
+          AUTOMATIC REDIAL WITH CIRCULAR DIALING QUEUE
+          --------------------------------------------
+
+
+          Some  remote  systems  can  be very  hard to reach.  ProComm
+          facilitates reaching them with its automatic redial feature.
+          Press ALT-R to invoke the redial procedure. Now  specify one
+          or  more  dialing  directory  entries  separated  by blanks,
+          commas or  semicolons.  Entries  may  contain  long distance
+          codes. The  program  will continuously redial the numbers in
+          the list  until you are  connected. ,sk Pressing CR  without
+          specifying any entries will dial  the numbers that  were  in
+          the list the last time it was used.
+
+          If the redial time is exceeded, or ProComm senses one of the
+          modem's no connect strings  (specified in the setup screen),
+          the  program  will proceed to  dial the next  number  in the
+          list. As  each  number is reached, it  is  removed from  the
+          circular queue. To remove an entry that is being called from
+          the list without  first connecting, press the DEL  key.  You
+          can also  press the SPACE key to abort the current call  and
+          proceed to the next entry in the list.
+
+          You can set  the  amount  of  time  ProComm waits  for  some
+          response by pressing  the END key. Specify the new  time  to
+          wait  (5-100  seconds) and  press  RETURN. If you  want  the
+          change to become permanent respond 'Y' to the 'save to disk'
+          prompt. You can also specify this timeout delay in the setup
+          screen.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   25
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Between each call  ProComm will delay for the amount of time
+          specified by the modem pause delay parameter (setup screen).
+          This is  provided to allow some modems  a sufficient time to
+          reset between  calls. To continue with  the next call  press
+          the SPACE key.
+
+          The alarm will  sound when you connect during a redial. If a
+          command file  is  linked to  the  entry that has  connected,
+          program control will pass to the linked command file.
+
+
+          FILE TRANSFER
+          -------------
+
+
+          The  ability to transfer  information makes a communications
+          program  a  very  powerful  tool.  ProComm  gives  you seven
+          choices for  two-way information transfer via file  transfer
+          protocols. With them  you  can up- and  download  files from
+          almost  any system.  The different  protocols  are described
+          below.
+
+
+          Uploading Files
+          ---------------
+
+
+          Begin uploading  a  file  to another system  by starting the
+          transfer on  the remote computer. When the remote  indicates
+          it is ready press PgUp. You will be presented with a menu of
+          protocol choices. Enter the number of  the protocol you wish
+          to use. A second window will prompt you for the  name of the
+          file to upload. Enter  the filename, including a path if you
+          want,  and  press return.  Another window  will  open  which
+          reports on the progress of the transfer.
+
+          An ASCII upload is somewhat of a special  case. No  transfer
+          progress window will  be  displayed but the status line will
+          indicate  that  an  ASCII  transfer is  taking  place. ASCII
+          uploads are under the control of 3 setup options. The  first
+          option controls line pacing. You can set up ProComm to pause
+          after it  sends each  line  of text to avoid overflowing the
+          receiver.  You  can also  specify if  text is  to be  echoed
+          locally  and  if  linefeeds  should  be  stripped  from  the
+          outgoing file.
+
+
+          Downloading Files
+          -----------------
+
+
+          Downloading  files is  just  as  easy.  After  starting  the
+          download procedure  on the  remote press  PgDn. The protocol
+          selection  window  is  displayed.  Enter the number  of  the
+
+
+          Copyright (C) 1986 PIL Software Systems                   26
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          protocol to use.
+
+          If  you select  ASCII, XMODEM or YMODEM protocol you will be
+          prompted for the filename. In all  other cases  the filename
+          is provided  by the sender. If you enter the name of  a file
+          that  already  exists you will be asked whether  or  not  to
+          overwrite it. If a filename provided  by the  sender already
+          exists the received file will be renamed by placing a dollar
+          sign in the first position  of the filename. For example, if
+          you  select to download FILE1.EXE using  the Telink protocol
+          and that  file  already exists in the current directory, the
+          downloaded file will be named $ILE1.EXE
+
+          After  specifying the protocol and (possibly) the file name,
+          a  window  will  open  which  displays  various  information
+          regarding the transfer. When the transfer is complete, or an
+          abort  is  sensed,  the  alarm  will sound  and  appropriate
+          messages will be displayed.
+
+          ASCII downloads are  somewhat  different from the  others in
+          two respects. First, no transfer status window is displayed.
+          A message  on  the  status  line  indicates  that  an  ASCII
+          download is in affect. Second,  ASCII  downloads  need  user
+          intervention to complete. Text is captured until  you  press
+          ESC to terminate the transfer.
+
+          Starting with version 2.3 we have provided a large degree of
+          control over various  ASCII file transfer  parameters. These
+          can be set from the setup  screen (ALT-S). There  are now  3
+          pacing options, plus echo and  blank expansion  options. You
+          can also conform CR and LF translation in a number  of ways,
+          allowing you to transfer to or from most any system.
+
+
+          File Transfer Protocols
+          -----------------------
+
+
+
+          ASCII
+
+          ASCII  file transfer is the equivalent of typing information
+          from one system to another. The ASCII characters are sent in
+          a one-way stream with no handshaking (other  than XON/OFF if
+          activated)  or error checking performed. This method is fine
+          for  some applications,  but  you  are limited to text  file
+          transfer.
+
+          One difference between an ASCII download and file logging is
+          that  all  data  (including  terminal  escape sequences)  is
+          captured, whereas during  logging terminal control sequences
+          are filtered out (with the exception of formfeeds).
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   27
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          XMODEM File Transfer
+
+          XMODEM  is a block-oriented error checking protocol released
+          into  the public domain  by its creator Ward Christensen. It
+          is very popular on electronic bulletin board systems. XMODEM
+          transfers  only a single  file at a time. The protocol  uses
+          two-way  communications and  either  a  checksum  or  cyclic
+          redundancy check for error checking. XMODEM can handle  text
+          or executable files with over 99% accuracy. ProComm supports
+          and  automatically adjusts  for  both the checksum  and  CRC
+          variants.
+
+          The XMODEM protocol is  defined  such  that  CRC checking is
+          always attempted  first.  If CRC is not acknowledged  by the
+          sender then  the checksum method  is used. ProComm correctly
+          implements  this,  however  some  other systems  do  not.  A
+          problem can  arise if the remote system  responds to the CRC
+          attempt but uses checksums.
+
+          Note that XMODEM  requires transfers to be  performed with 8
+          data bits, 1 stop bit and no parity. If you attempt to begin
+          an  XMODEM transfer while set  to other  parameters, ProComm
+          will automatically switch to  N/8/1, returning  you  to your
+          original parameters when the transfer is complete.
+
+          Some  systems, such as CompuServe, have  trouble meeting the
+          standard  XMODEM  timing sequences.  You  may  set ProComm's
+          XMODEM  facility  into  a  'relaxed'  mode,  which has  less
+          critical  timing,  using  the  setup  (ALT-S)  screen.  Most
+          systems will work fine with XMODEM set to normal.
+
+          MODEM7 File Transfers
+
+          MODEM7 is a variant  of the XMODEM protocol.  By sending the
+          filename   batch   transfers   (multiple   files)   can   be
+          accomplished. CRC and checksum are supported.
+
+          YMODEM File Transfers
+
+          YMODEM  is another XMODEM variant.  Its  main  advantage  is
+          support  for  longer  data blocks to speed  transfer  times.
+          ProComm supports YMODEM for single file transfers and YMODEM
+          Batch  for   multiple  file  transfers.  YMODEM  Batch  also
+          provides  some  header  information  such  as  filename  and
+          filesize.  YMODEM file transfers are  always performed  with
+          CRC error checking.
+
+          Telink File Transfers
+
+          Telink is yet another XMODEM/MODEM7 variant  which adds file
+          size  and creation date information. It  is  found mainly on
+          FIDO  bulletin board systems,  and provides  for batch  file
+          transfers.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   28
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          Kermit File Transfer
+
+          Kermit is a packet-oriented protocol  developed  at Columbia
+          University  that is  available  on  many  different computer
+          systems. By using a technique called 8th-bit quoting, Kermit
+          is  able  to  transfer  binary  files  between  7 and 8  bit
+          systems.  In  some implementations, such as ProComm,  Kermit
+          supports multiple file transfers.
+
+          Our implementation  of  Kermit  includes all  of the  latest
+          kermit   enhancements,  such   as   data  compression,  file
+          attributes, and sliding windows.
+
+          The most significant of these features is sliding windows. A
+          "sliding window" protocol is a full duplex protocol that can
+          transmit  and  receive  data at  the same time.   The XMODEM
+          family of  protocols are  half duplex protocols.  They  must
+          wait between each block of  data for a reply from  the other
+          side. This wastes a  lot of time. Full duplex protocols  can
+          send  a continuous stream of data while receiving replies at
+          the  same  time.  This   greatly  increases  file   transfer
+          efficiency. ProComm  Kermit will automatically sense  if the
+          other Kermit supports  sliding windows and will use them  if
+          it does. Currently Sliding Window Kermit is available on The
+          Source,  TCOMM  BBS, and PC-HOST BBS. Mainframe versions are
+          under  development  and should  be  appearing soon.  ProComm
+          Kermit is  backwards  compatible  with earlier  versions  of
+          Kermit.
+
+          ProComm's default kermit  settings  are fairly standard  and
+          should only need  to be  changed under  special  conditions.
+          Due to the sliding window enhancement, block size  should be
+          limited  to  a maximum of 90,  rather than 94 as in standard
+          Kermit.
+
+          In addition,  a few Kermit server  commands  are  supported.
+          Press  ALT-K  to access  the  Kermit  server  command  menu.
+          Available  commands include Finish,  Logout,  Send  and Get.
+          Finish (1) will terminate  the Kermit session and return you
+          to  the system level. Logout (2)  will terminate  Kermit and
+          log  you  off  the remote. Get (3)  and Send  (4) will  both
+          prompt  for the appropriate filename and  then  perform  the
+          indicated function.
+
+          More  information  on  Kermit  is  available  from  Columbia
+          University. Send $5 each for the Protocol or User manual to:
+
+                  Kermit Distribution
+                  Columbia University Center for Computing Activities
+                  7th floor, Watson Laboratories
+                  612 West 115th Street
+                  New York, NY 10025
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   29
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          TRANSLATE TABLE
+          ---------------
+
+
+          ProComm's translate table provides a means for you  to strip
+          or replace characters you  receive from  the  remote.  Press
+          ALT-W to display the current translation settings. The table
+          will indicate  the  whether translation is currently  taking
+          place, as well as showing you the current translation values
+          for   the  ASCII  characters  0-127.  Press  F2  to  display
+          translation values for characters 128-255. Pressing the keys
+          F3 and F4 will  toggle the translation effect on or off. You
+          may set the default condition using the setup screen.
+
+          To  change a  translation value,  enter  the ASCII  code  to
+          reset. Now enter the translated  value (both in decimal). To
+          strip an unwanted character, translate it to 0. Press  F1 to
+          save  translation  values between  sessions.  Press  ESC  to
+          return to terminal mode.
+
+
+          COMMAND FILES
+          -------------
+
+
+          Command files are text files you create that contain ProComm
+          commands. You  can  use command  files to perform  automatic
+          logons, do unattended  file transfers and many  other tasks.
+          You  can  even  link command  files to the  entries in  your
+          dialing directory.
+
+          Create  a command file using  your favorite  word processor.
+          You  may  use any valid filename; however, ProComm looks for
+          files  with  an extension of  .CMD  when it  lists available
+          command  files.  Use the commands described below to perform
+          your  specific  task.  Be sure to  test  your command  files
+          thoroughly before using them for unattended communications.
+
+          You can execute  command files from within  ProComm or  as a
+          command  line option  when  you first invoke the program. If
+          you specify them on the command line, using the '/F' option,
+          they  will  be  executed immediately upon  program  startup.
+          Execute them inside the program by pressing  ALT-F5. ProComm
+          first searches  for  files with  the  .CMD extension  in the
+          current directory. If  any  are found they are  displayed in
+          the window. If none are found ProComm looks in the directory
+          pointed to by the PROCOMM environment variable. Again, if it
+          finds  any they are displayed in  the  window, otherwise the
+          message  'NO FILES' is  displayed. You may then specify  the
+          command by file  name,  or chose  from the scrolling  window
+          display.
+
+          To chose from the scrolling window, position the highlighted
+          bar on  the name of  the file you wish  to execute and press
+
+
+          Copyright (C) 1986 PIL Software Systems                   30
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          enter. PGUP and  PGDN  will  scroll the window one  page  in
+          either direction. The cursor keys will scroll the window one
+          entry  in  either  direction.  Pressing  the HOME  key  will
+          position you at the first page  of  available command files;
+          pressing END will position you at the last.
+
+          If you begin to enter a command file name at  the prompt you
+          may still scroll  the  window but you may not select a  file
+          for execution from the scrolling display. You can leave  the
+          .CMD extension off when executing  command files  explicitly
+          by name.
+
+          You can  abort  a command file  by  pressing  ESC during its
+          execution.  The command  file will  abort  when  the current
+          command has  completed (this might take  a few seconds).  In
+          some cases,  such as  while  dialing or  performing  a  file
+          transfer, two  ESCs are needed:  one  to abort  the task  in
+          progress and a second to abort the command file.
+
+          There is  a special command file named  PROFILE.CMD. ProComm
+          will look for this file in the default  directory first, and
+          then in the directory pointed to by the PROCOMM= environment
+          variable  discussed above.  If  it  is  found,  it  will  be
+          executed immediately upon  program startup. You can  use the
+          profile to do  custom  setup work like changing to a special
+          directory,  turning off  the  sound,  changing communication
+          parameters or  overriding  the default modem  initialization
+          string.
+
+          Command file instructions all have  the  same  general form.
+          Each  must  begin  with  a  percent  sign  ('%'),   followed
+          immediately by a 1 to  3 character command. Commands  may be
+          in  either upper or lower case.  All other characters in the
+          file are ignored and may be used as comments.
+
+          Many commands also require an additional argument. There are
+          two conventions for specifying arguments. If the argument is
+          enclosed  in quote  marks (the  double  quote  char:"), that
+          argument is used. If the argument is enclosed in  tick marks
+          (the single quote char:'), a window is opened which uses the
+          specified argument to prompt the user for the real argument.
+          For example,  the command %XUK"FILE1.EXE"  causes  the  file
+          FILE1.EXE to be  uploaded via Kermit.  The command %XUK'FILE
+          TO UPLOAD' will open a window containing the prompt 'FILE TO
+          UPLOAD'.  The user must  then specify the  file he wishes to
+          have uploaded.  That  filename is  then passed to the Kermit
+          upload procedure and  execution continues.  Be  very careful
+          that  you do not specify arguments  to be prompted  for in a
+          command file that is to execute without user supervision.
+
+          We have provided several  command files  for  accessing  the
+          popular  information  services.  Look  at  these  files  for
+          examples of correct command usage.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   31
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          ProComm currently supports the following commands:
+
+          %A - Alarm
+
+          This command will sound an alarm to alert you to some event.
+          Set  the alarm time from  the setup  screen or using the %ST
+          command. This  command is also  under  control of  the alarm
+          on/off  setting   from  the  setup  screen,  which  may   be
+          controlled by the %SA command.
+
+          %B"directory" - Change default directory
+
+          This command will change the  default directory or drive. It
+          will not do both at once however. For instance, the  command
+          %B"A:DIR1" will make  DIR1  the  current directory for drive
+          a:,  but it  will NOT make ProComm change  default drives to
+          a:. Use a command like %B"A:" to change drives.
+
+          %C"ldcode number ldcode" - Call a number
+
+          Use  the call command to  dial  an  entry  in  your  dialing
+          directory.  Specify  the  number of  the  entry,  optionally
+          preceded and/or followed by a long distance code identifier,
+          as the  quoted  argument.  For  example. the command %C"#24"
+          will  dial  entry number  24  using  the long distance  code
+          identified  by  '#'.  This  command  uses  the  auto  redial
+          facility to place its calls; it will keep re-dialing until a
+          connection is made. Use the '%R' command described  below to
+          change the redial wait delay.
+
+          If you  sort your dialing directory you will  need to change
+          your command files so the entry numbers match.
+
+          If a command file is linked via the dialing directory to the
+          entry being dialed,  the  linked command  file will  not  be
+          executed. Place all statements to be executed in the command
+          file which initiates the call.
+
+          %D"command to execute" - DOS Command
+
+          This feature  allows you to  execute a  DOS command or other
+          program from the command file. Enter the command as it would
+          appear  on  the DOS command  line between  the  quotes.  For
+          example, to go out to  DOS and type  a file to  your printer
+          use the  command  %D"type  filename  >  prn".  This  command
+          requires  two  things:  enough  memory  and  the environment
+          variable COMSPEC= set  correctly. CAUTION: If you execute  a
+          program  or command  requiring  user input be sure  you  are
+          around to provide it, as the program will wait until you do.
+
+          %Ex - Emulations, where x is 0,1,2,3,4,5,6,7,8 or 9
+
+          Use  this command to specify which terminal emulation is  to
+          be used.
+
+
+          Copyright (C) 1986 PIL Software Systems                   32
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+               Use 0 for IBM 3101
+                   1 for DEC VT-100
+                   2 for Televideo 910/920
+                   3 for Televideo 925/950
+                   4 for DEC VT-52
+                   5 for Lear Siegler ADM3/5
+                   6 for Heath/Zenith 19
+                   7 for ANSI-BBS
+                   8 for ADDS Viewpoint
+               and 9 for Wyse 100.
+
+          %F"x" - Change communications parameters
+
+          Changes the comm parameters based on 'x' as follows:
+
+               1 - 300/E/7/1
+               2 - 1200/E/7/1
+               3 - 2400/E/7/1
+               4 - 4800/E/7/1
+               5 - 9600/E/7/1
+               6 - 19200/E/7/1
+               7 - 300/N/8/1
+               8 - 1200/N/8/1
+               9 - 2400/N/8/1
+               10 - 4800/N/8/1
+               11 - 9600/N/8/1
+               12 - 19200/N/8/1
+               13 - Odd parity
+               14 - Mark parity
+               15 - Space parity
+               16 - 7 data bits
+               17 - 8 data bits
+               18 - 1 stop bit
+               19 - 2 stop bits
+               20 - COM1:
+               21 - COM2:
+
+          Note  that these settings correspond to those  used  by  the
+          ALT-P command.
+
+          %G - Screen dump
+
+          %G will  make a  screen dump of the current  screen contents
+          and append it to the current .IMG file.
+
+          %H - Hang-up
+
+          This instruction is the same as the  ALT-H command described
+          below.
+
+          %I"string to wait for" - Incoming
+
+          This  handy feature will pause command  file execution until
+          the specified string is received from the  remote system, at
+
+
+          Copyright (C) 1986 PIL Software Systems                   33
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          which point  execution  will  continue.  Strings must  match
+          exactly in  all respects including case.  To avoid  deadlock
+          situations there is a maximum wait time for any  string. The
+          default wait time is 30 seconds but may be changed using the
+          '%P' command described below.  If the delay time is exceeded
+          without the string being found, execution will continue.
+
+          %Jx - ALT key sequence, where x is 0 to 9
+
+          Use  this to  execute a keyboard  macro.  For instance,  use
+          '%J1' to issue the sequence assigned to ALT-1.
+
+          %KBB - Kermit binary mode
+
+          Set Kermit into binary mode.
+
+          %KBT - Kermit text mode
+
+          Set Kermit into text mode.
+
+          %KF - Kermit server command: Finish
+
+          Shuts down the Kermit server  and returns you  to the system
+          level.
+
+          %KL - Kermit server command: Logout
+
+          Shuts down the Kermit server and logs you off.
+
+          %KG"filespec" - Kermit server command: Get
+
+          Sends  a request  to  begin a  Kermit download of the  given
+          file.
+
+          %KS"filespec" - Kermit server command: Send
+
+          Sends a request to begin a Kermit upload of the given file.
+
+          %LO"filename" - Log file open
+
+          This  instruction will open the log file using the indicated
+          name.
+
+          %LC - Log file close
+
+          Close  the  previously  opened  log file by  including  this
+          command.
+
+          %LH - Log file hold
+
+          Temporarily suspend logging to the opened log file.
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   34
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          %LR - Log file resume
+
+          Resume logging to the log file.
+
+          %LPO - Open printer for logging.
+
+          Begin logging to the printer.
+
+          %LPC - Close printer.
+
+          Stop logging to the printer.
+
+          %M"message" - Message
+
+          Display a  message on your  screen. This message will not be
+          sent to the remote system.
+
+          %NY"prompt" - Get and transmit user input
+
+          This command will open a window and prompt for user input to
+          send to  the remote. The window will accept strings up to 68
+          characters long. The prompt may be up to  60 characters. The
+          string  may contain control characters  as described in  the
+          section on  output string  translation. The string  sent  is
+          followed  by a  carriage return. This command  will not time
+          out; do not use it for unattended operation.
+
+          %NN"prompt" - Get and transmit with mask
+
+          This command works  the same as the  %NY  command  with  one
+          exception: text entered by the  user at the prompt is masked
+          by asterisks for security purposes.
+
+          %OD - Direct screen writes
+
+          Use the direct screen write method.
+
+          %OB - BIOS screen writes
+
+          Use the BIOS for screen writes.
+
+          %P"delay in seconds" - Pause for incoming delay
+
+          Use this command to  change the  amount  of  time  the  '%I'
+          command  waits  for  an  incoming  string.  If  you  specify
+          '%P"45"',  any  subsequent '%I' command will pause up to  45
+          seconds waiting for the string.
+
+          %Q - Quit
+
+          End the current ProComm session.
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   35
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          %R"delay in seconds" - Redial delay time
+
+          Use this  to  reset  the amount of  time  allocated for each
+          redial attempt.  If  the  number  of  seconds  specified  is
+          reached  before a connect or  no  connect  message  has been
+          received from the modem, ProComm will  hang  up the call and
+          attempt another redial.
+
+          %SAN - Alarm off
+
+          This command will cause the alarm sound to be suppressed. It
+          does not affect window sound effects, the  modem speaker nor
+          bells (^G) received from the remote.
+
+          %SAY - Alarm on
+
+          This command  will cause the alarm sound to be activated. It
+          does  not affect window sound effects, the modem speaker nor
+          bells (^G) received from the remote.
+
+          %SN - Sound off
+
+          Turn sound  effects off.  This  does  not  affect the  modem
+          speaker, the alarm or bells (^G) sent by the remote.
+
+          %SY - Sound on
+
+          Turn sound  effects  on.  This  does  not  affect the  modem
+          speaker, the alarm or bells (^G) sent by the remote.
+
+          %ST"alarm time in secs" - Set alarm time
+
+          Set the amount of time the alarm will sound.
+
+          %T"string" - Transmit string
+
+          Use  this  command  to  transmit  a  string  to  the  remote
+          computer.  You  may  imbed CTRL characters by prefacing them
+          with the translate CTRL character (see the section on output
+          string translation).
+
+          %U1 - Clear screen
+
+          Clears the local console only.
+
+          %U2 - CR
+
+          Incoming carriage returns are displayed as is.
+
+          %U3 - CR/LF
+
+          Incoming  carriage  returns  are  displayed  as  a  carriage
+          return-line feed sequence.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   36
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          %U4 - Full duplex
+
+          Set duplex to full (no echo).
+
+          %U5 - Half duplex
+
+          Set duplex to half (echo performed).
+
+          %U6 - Break
+
+          This command causes the break condition to occur.
+
+          %U7 - Set line wrap on
+
+          Cause lines over 80 characters  to  wrap around  to the next
+          line.
+
+          %U8 - Set line wrap off
+
+          Cause lines longer than 80 characters to be truncated.
+
+          %U9 - Set scroll on
+
+          Set scroll on. See the section on setup for more details.
+
+          %U0 - Set scroll off
+
+          Set scroll off.
+
+          %UBN - BS non-destructive
+
+          Sets backspace translation to non-destructive.
+
+          %UBY - BS destructive
+
+          Sets backspace translation to be destructive.
+
+          %UCR - Restart if carrier lost
+
+          This command will cause  a check  for carrier detect. If  no
+          carrier  is  found  the  command file will  be  rewound  and
+          restarted.  This  is  useful if you want to  check for  lost
+          carrier, and  redo  the  command  file  until  it  completes
+          successfully.  You MUST have your CD mask set  correctly for
+          this command to function right or unpredictable results will
+          occur.
+
+          %UCX - Exit if carrier lost
+
+          Same as above except command file is aborted.
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   37
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          %UHN - Handshake none
+
+          Tells ProComm not to perform any handshaking protocol.
+
+          %UHY - Handshake XON/XOFF
+
+          Instructs ProComm to use XON/XOFF handshaking.
+
+          %UXN - XMODEM normal
+
+          Set XMODEM to use the normal mode.
+
+          %UXR - XMODEM relaxed
+
+          Use relaxed XMODEM for file transfers.
+
+          %VH - Enter host mode
+
+          Puts ProComm into host  mode. User intervention is  required
+          to exit host mode.
+
+          %VP"pswd" - Set host password
+
+          Use  this  command  to  modify  the   password  for  callers
+          attempting to access the ProComm host.
+
+          %VS"pswd" - Set host shell password
+
+          Set the host DOS shell password suing this command. CAUTION:
+          be very careful whom you allow  to access the DOS shell from
+          host mode.
+
+          %W"wait time in seconds" - Wait
+
+          This provides a pause of the given duration.
+
+          %XDK - Download Kermit
+
+          Download file(s) using the Kermit protocol.
+
+          %XDM - Download MODEM7
+
+          Download file(s) using the MODEM7 protocol.
+
+          %XDT - Download Telink
+
+          Download file(s) using Telink.
+
+          %XDX"filespec" - Download XMODEM
+
+          Download using XMODEM to filespec.
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   38
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          %XDY"filespec" - Download YMODEM
+
+          Download using YMODEM to filespec.
+
+          %XDY - Download YMODEM batch
+
+          Download file(s) using YMODEM batch protocol.
+
+          %XUA"filespec" - Upload ASCII
+
+          Upload the file called 'filespec' using ASCII protocol.
+
+          %XUK"filespec" - Upload Kermit
+
+          Upload the file called 'filespec' using Kermit protocol.
+
+          %XUM"filespec" - Upload MODEM7
+
+          Upload the file called 'filespec' using MODEM7 protocol.
+
+          %XUT"filespec" - Upload Telink
+
+          Upload the file called 'filespec' using Telink protocol.
+
+          %XUX"filespec" - Upload XMODEM
+
+          Upload the file called 'filespec' using XMODEM protocol.
+
+          %XUY"filespec" - Upload YMODEM
+
+          Upload the file called 'filespec' using YMODEM protocol.
+
+          %XUZ"filespec" - Upload YMODEM batch
+
+          Upload  the  file   called  'filespec'  using  YMODEM  batch
+          protocol.
+
+          %YEN - ASCII upload echo off
+
+          Do not echo text locally during ASCII uploads.
+
+          %YEY - ASCII upload echo on
+
+          Echo text locally during ASCII uploads.
+
+          %YC"ASCII value" - ASCII upload pacing character
+
+          Specify the character (as  an ASCII  decimal  value) to wait
+          for between sending lines.
+
+          %YDCx - ASCII download CR translation
+
+          Control incoming CR translation  during  ASCII downloads.  X
+          may take  3 values:  0  means no  translation, 1 means strip
+
+
+          Copyright (C) 1986 PIL Software Systems                   39
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          incoming  carriage returns  and 2 means add  a LF after each
+          received CR.
+
+          %YDLx - ASCII download LF translation
+
+          Control  incoming  LF translation during ASCII downloads.  X
+          may take 3 values:  0 means  no translation,  1 means  strip
+          incoming  line  feeds  and  2 means add  a  CR  before  each
+          received LF.
+
+          %YPC"milliseconds" - ASCII upload character pacing
+
+          Change the character pace count for ASCII uploads.
+
+          %YPL"1/10 seconds" - ASCII upload line pacing
+
+          Change the line pace count for ASCII uploads.
+
+          %YUCx - ASCII upload CR translation
+
+          Control outgoing CR  translation during ASCII uploads. X may
+          take 3  values:  0  means  no  translation,  1  means  strip
+          outgoing carriage returns and 2 means add a LF after each CR
+          sent.
+
+          %YULx - ASCII upload LF translation
+
+          Control outgoing LF translation during ASCII uploads.  X may
+          take  3  values:  0 means  no  translation,  1  means  strip
+          outgoing line  feeds  and 2 means  add  a  CR before each LF
+          sent.
+
+          %YXN - Blank expansion off
+
+          Turn off the expansion  of  blank  lines  in outgoing  ASCII
+          uploads.
+
+          %YXY - Blank expansion on
+
+          Turn on blank line expansion during ASCII uploads.
+
+          %ZY - Translate table on
+
+          Set incoming character translation active.
+
+          %ZN - Translate table off
+
+          Disable the translate table.
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   40
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          HOST MODE
+          ---------
+
+
+          Beginning with  version 2.3, we have included a limited host
+          mode to  allow remote  access of  your computer. It features
+          password  protection,  file transfers, operator page and DOS
+          shell  access.  It can  also  display  a  canned  message or
+          graphic screen, and maintain a history of logons.
+
+          Host mode requires some setup before it is used.  There is a
+          setup  screen  that  contains 4  host  options  that must be
+          correctly  initialized.  The first  option  is  the  host ID
+          string. This is merely a text message that is displayed when
+          someone calls in. The second option is the modem auto-answer
+          string. This is the command sent  to the  modem to  place it
+          into auto  answer mode. The  default string is set for Hayes
+          compatible modems and is '~~~+++~~~ATS0=1', where
+
+               ~~~     is a 1 1/2 second pause
+               +++     drops the modem into command state
+               ~~~     is a 1 1/2 second pause
+               AT      is the command prefix
+               S0=1    sets modem to answer after one ring
+
+          When host  mode is  terminated the regular modem init string
+          is sent to reset the modem. If you don't want auto-answer to
+          be on when you are not  in host mode, include the command to
+          turn it off  (i.e.  S0=0 for Hayes)  within the  modem  init
+          string.  The third host option is the host access  password.
+          It may  be up to 8 characters in length. Callers must  match
+          the password  exactly including  case.  If  you set this  to
+          null, callers need only press RETURN at the password prompt.
+          The  last  host  option is  the  DOS  shell  password.  This
+          provides  a  second  level  of  password  protection  before
+          callers have  access  to the system level.  Be very  careful
+          with this one; you don't want  just anyone to have access to
+          the operating system level on your machine.
+
+          Some other  settings  are  also  very  important  to correct
+          operation  of host mode.  Within ProComm, the carrier detect
+          mask (CD mask) MUST be set correctly for your  modem (the CD
+          mask is discussed elsewhere  in this  manual).  In addition,
+          your modem should be set to follow the true state of carrier
+          detect  (CD) and data  terminal ready (DTR);  that  is,  the
+          modem cannot  hold these values true,  or high. Consult your
+          modem manual for details specific to that modem.
+
+          To place ProComm into host mode press ALT-Q. The auto-answer
+          string is  set to the modem and  the local console  displays
+          "Waiting...". A line is added to PROCOMM.HST, the host audit
+          trail history file, that records the  time and date. When  a
+          call comes in, and a connect occurs, ProComm issues the host
+          ID string and prompts the user for his name. The name is for
+
+
+          Copyright (C) 1986 PIL Software Systems                   41
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          informational  purposes  only.  After  the caller enters his
+          name  it  is recorded  in the  history  file.  ProComm  then
+          prompts for  password. The caller must  match  the  password
+          completely  including  case.  All  password  attempts,  both
+          successful and  otherwise, are recorded in the history file.
+          Callers get three chances to match the password. If they are
+          unsuccessful after three tries ProComm will hang up on them.
+
+          When the caller makes  it  past  the  password, ProComm will
+          attempt to display  the  contents of  a special file  called
+          PROCOMM.MSG. You can  use this file as a welcome message, to
+          display graphics  or whatever. Every  23 lines  ProComm will
+          halt, display a "[MORE]" message, and wait for any keystroke
+          from the caller. When a keystroke is received display of the
+          file continues. Use of the .MSG file is optional.
+
+          After  PROCOMM.MSG  is  displayed, if  it  is, the caller is
+          presented with the host menu:
+
+               F)iles   C)hat   D)ownload   U)pload   S)hell   G)oodbye
+
+          Callers make  their choices by entering the  first letter of
+          an option.
+
+          The F)iles option will  send  a  list of  the  files  in the
+          current directory to the caller.  The list is  not displayed
+          on the local console. F)iles uses the same facility that the
+          ALT-F command uses.  See the  section on  File Directory for
+          more details.
+
+          If the  caller chooses C)hat  an alarm  is  sounded  for  30
+          seconds. Press SPACE to  chat with  the caller. Pressing any
+          other key will end the alarm and redisplay the host menu. If
+          you have the alarm  sound  set  off (via general  setup)  no
+          bells will sound  on  the local  end. Press ESC when you are
+          done chatting to return to the host menu.
+
+          D)ownload and U)load work pretty  much the same.  The caller
+          is presented with the file transfer menu:
+
+               K)ermit   M)odem7   T)elink   X)modem   Y)modem batch
+
+          After  selecting a protocol the caller may be prompted for a
+          filename depending upon the  transfer direction and protocol
+          used.  The  standard  file transfer  routines  are  used  to
+          perform the transfers.
+
+          The S)hell command is very powerful and has the potential of
+          being very dangerous. It performs the equivalent  of a 'CTTY
+          COMx' command, which basically redirects all console I/O out
+          the com port. This command puts the caller in charge of your
+          computer at the operating system level. This means that they
+          can format your disk  or whatever, so be  very, very careful
+          who you allow to access this command. Use the shell password
+
+
+          Copyright (C) 1986 PIL Software Systems                   42
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          to protect yourself.
+
+          There  are some restrictions when using  the shell  command.
+          For one,  do  not run programs  that write  directly  to the
+          screen buffer.  If the host machine is running Dosedit,  CED
+          or a similar program, backspaces, escapes and possibly other
+          key sequences can lock up the machine.  This problem relates
+          to DOS  and the other programs.  There is  nothing we can do
+          about it. In  addition, some machines we have  tried this on
+          do  not  pipe I/O to the  correct  port.  We  have  not  yet
+          determined if this is  a DOS or BIOS problem,  but be  aware
+          that  it  may occur.  We suggest  you  thoroughly test  this
+          feature before making it available to callers.
+
+          The  G)oodbye option logs the caller out and places a notice
+          to that effect in the history file.
+
+          On the  local side, the host has several  options. Press ESC
+          to leave host mode.  Press  CTRL-X  to  log off the  current
+          user. All other keystrokes  act as  if the caller sent them;
+          you can help novice users through the menus that way.
+
+          NOTE: Host  mode,  especially the shell command, opens a few
+          more  files.  Be sure  that  the  FILES= statement  in  your
+          CONFIG.SYS file is set high enough. We recommend FILES=15.
+
+
+          CHAT MODE
+          ---------
+
+
+          ProComm  features  a  split  screen  chat  mode  for  online
+          conversations. Incoming text (and echoed outgoing text if in
+          full duplex) is displayed in the top 18 lines of the screen.
+          Outgoing text is displayed in the bottom 4 lines.
+
+          Activate  chat mode by pressing ALT-O. Limited line  editing
+          is provided for outgoing text. You can use backspace to edit
+          a  line  before it goes out. Text is sent to the remote only
+          after a carriage return or when  the buffer gets full (about
+          3 lines). One exception is that CTRL-Q and CTRL-S keystrokes
+          (XON and XOFF) get sent immediately.
+
+          Printer and disk logging will  occur  if  it is  active when
+          chat mode begins.  ALT-F6 (redisplay buffer) is available in
+          chat mode. Press ESC to exit chat mode.
+
+
+          KEYBOARD MACROS
+          ---------------
+
+
+          Another  useful  feature provided  by  ProComm  is  keyboard
+          macros. This facility allows you to assign character strings
+
+
+          Copyright (C) 1986 PIL Software Systems                   43
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          to each of the keys  ALT-0 through ALT-9. The strings may be
+          up  to  24 characters  in  length, and may contain  imbedded
+          control  codes  and  carriage  returns  using the  translate
+          conventions described elsewhere. To  send the  string you've
+          assigned, simply press the appropriate key.
+
+          Access  the keyboard macros by pressing ALT-M  from terminal
+          mode.  A  window   will  appear  listing   the  current  key
+          assignments. To revise an assignment press 'R', and then the
+          key to assign (ALT-0 through ALT-9). Now type the string you
+          wish assigned to that key. Respond 'Y' to the save prompt to
+          make  the assignment permanent; otherwise, it  is discarded.
+          Press ESC to return to terminal mode.
+
+
+          DOS GATEWAY
+          -----------
+
+
+          ProComm provides a  gateway  to DOS  to allow you to execute
+          DOS  commands or other programs without  ending the  ProComm
+          session  -  just  press  ALT-F4.  ProComm  uses the  COMSPEC
+          environment variable  to determine the  name of the  command
+          processor to use, so that variable must be set correctly for
+          the gateway  to work.  Enter 'EXIT' on the  DOS command line
+          when you wish to return to ProComm. CAUTION: executing other
+          communications  programs  through   the  gateway  may  cause
+          erratic results when you return to ProComm.
+
+
+          EDITOR
+          ------
+
+
+          To call an  editor, word  processor or  other  program  from
+          within ProComm,  press ALT-A. ProComm  will attempt to  find
+          and load  the  program  named in setup screen. This  can  be
+          quite useful  for  viewing  a file,  doing  some  editing or
+          whatever. The conditions described above for the DOS gateway
+          must  be  met  for this  feature  to  perform correctly.  In
+          addition, the  program to  be  executed  must reside in  the
+          current directory or in a directory that is  included in the
+          PATH.
+
+          There is no default for this feature so be sure to set it up
+          before attempting to use it.
+
+
+          SCREEN DUMP
+          -----------
+
+
+          Pressing ALT-G produces a screen dump of the  current screen
+          contents. Screen contents are appended  to the  current .IMG
+
+
+          Copyright (C) 1986 PIL Software Systems                   44
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          file, which may be  specified  using  the  setup screen. The
+          default screen dump file is PROCOMM.IMG.
+
+
+          FILE AND PRINTER LOGGING
+          ------------------------
+
+
+          ProComm   provides  2  alternatives  to  file  transfer  for
+          capturing  information:  file  and  printer  logging.  After
+          initiating the  logging  procedure,  any information  coming
+          from  the remote system is routed  to the log as well as the
+          screen.
+
+          Press ALT-L to begin capturing information to  your printer.
+          A message on the status line will indicate that  the printer
+          log  is open. ProComm  writes the  logged  data  to  the DOS
+          device PRN. You  may use the  DOS 'MODE' command to redirect
+          PRN. Press ALT-L again to toggle printer logging off.
+
+          Data can be  captured to disk by using  the ALT-F1  command.
+          Specify the name of the file to be used, or  press RETURN to
+          use the default. If the file already exists, new information
+          will be  appended  at  the end of the file. Press ALT-F2  to
+          suspend information capture without  closing the log file. A
+          message  will be displayed on the bottom  line of the screen
+          indicating logging status.
+
+          Terminal  control sequences  are  not  included  in  the log
+          files, with the exception of formfeeds.
+
+
+          SETTING DISPLAY COLORS
+          ----------------------
+
+
+          To set colors enter ALT-Z  from terminal mode. A window will
+          open  with  a list of window  selections  on  the  left  and
+          instructions  on the right. Press the up  or down arrow keys
+          to  choose  a  selection  to change. Next, press the left or
+          right  arrow   keys  to   choose  which  colors  to   change
+          (background, foreground,  or hi-lighted). Pressing the space
+          bar will  cycle between the  possible colors. After you have
+          set  all the colors you desire,  press ESC to exit. You will
+          then be asked if you want to save the color changes to disk.
+          If you save the  changes to disk, they will remain until you
+          change  them again, otherwise  they will remain only for the
+          current session.
+
+          Some  windows do  not  appear  in the  window list  but  are
+          settable anyway. The ALT-T, ALT-B and ALT-X windows use  the
+          same  colors as  the  keyboard  macros  window.  The  redial
+          display  uses the phone directory  colors. The setup screens
+          use  the help window colors. Communication screen colors are
+
+
+          Copyright (C) 1986 PIL Software Systems                   45
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          used in the  redisplay  section.  The script  file selection
+          window uses the file transfer window colors.
+
+
+          REDISPLAY BUFFER
+          ----------------
+
+
+          To redisplay lines that have scrolled off your screen, press
+          ALT-F6.  ProComm  will display the last 4000 characters that
+          have come in.
+
+          Use the  PgUp and PgDn  keys  to  scroll one page  in either
+          direction. Use  the up and  down arrow keys to move one line
+          in either direction. Pressing the Home key  will take you to
+          the first  page of the  redisplay buffer, while pressing the
+          End key will take you to  the  last. To  search for specific
+          text press 'F' or '/'. You will be prompted for the  text to
+          search for. If the text if found ProComm will scroll to  the
+          page it is on and highlight what it found. To search for the
+          same text again use the same keystroke  and then press ENTER
+          when prompted for the  text to  look  for. Searches are  not
+          case sensitive.
+
+
+          FILE DIRECTORY
+          --------------
+
+
+          Press ALT-F to get  a directory listing of your files. Enter
+          a filespec  at the  prompt just as you would  in the DOS DIR
+          command. Paths and drives are supported. COMSPEC must be set
+          correctly for this feature to work.
+
+
+          VIEW A FILE
+          -----------
+
+
+          To  examine a  file that  exists on your  system type ALT-V.
+          You'll  be  prompted for the  name  of  the file.  Enter the
+          complete filename, including drive  and path  designator  if
+          desired. Use the PGUP  and PGDN keys  to  page  through  the
+          file. Press HOME to go to the  beginning  of the file. Press
+          ESC to abort the viewing procedure.
+
+
+          PROGRAM INFORMATION
+          -------------------
+
+
+          To display  the  ProComm program  information screen,  press
+          ALT-I. Type any key to return.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   46
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          CHANGE LOGGED DRIVE OR DIRECTORY
+          --------------------------------
+
+
+          ProComm allows  you to change the default  directory or  the
+          logged drive you are  working in. Just press  ALT-B and give
+          the name of the new directory or drive. All downloaded files
+          are  placed in the current default directory, as well as log
+          files you create.
+
+
+          DISPLAY ELAPSED TIME
+          --------------------
+
+
+          Pressing ALT-T will  display the  current time and  date, as
+          well as  the elapsed  time  since  the  last call  was made.
+          Elapsed time is reset  every time you make  a call using the
+          dialing directory, and when  you make a connection using the
+          redial facility.
+
+
+          CLEAR SCREEN
+          ------------
+
+
+          Press  ALT-C to  clear your screen and home the cursor. This
+          is a local effect only.
+
+
+          HANG-UP
+          -------
+
+
+          Press  ALT-H  to hang-up your  telephone connection. ProComm
+          accomplishes this  by first attempting to drop DTR.  If this
+          fails,  then the modem hang-up string is sent to  the modem.
+          ProComm uses  the "carrier  detect mask" in the setup screen
+          to determine if the hang-up was successful.  Most modems use
+          a mask of 32 or  128.  If you  receive the  "HANG UP FAILED"
+          message after  pressing ALT-H. perform the following checks:
+          Be sure  your modem is set to monitor DTR and CD. If hang-up
+          still  fails, check  that the  modem  hang-up string in  the
+          setup screen is  correct for your modem.  If it still fails,
+          try  different values  for  the carrier  detect mask.   Some
+          common values are 16, 32, 48, and 128.
+
+
+          TOGGLE DUPLEX
+          -------------
+
+
+          ALT-E will  toggle duplex between  full and half.  ProComm's
+          default  duplex is set by the user  in the setup screen.  If
+
+
+          Copyright (C) 1986 PIL Software Systems                   47
+
+
+
+          ProComm 2.3                                 Program Features
+
+
+
+
+
+          characters you type appear twice you  should  set duplex  to
+          full. Likewise, if you type something that is not  displayed
+          try  toggling duplex to half. A message is briefly displayed
+          on the status line when you toggle this setting.
+
+
+          TOGGLE CR - CR/LF
+          -----------------
+
+
+          Some  remote  systems  delimit  lines  of  text with  single
+          carriage returns, while  others use a  carriage  return/line
+          feed combination.  ProComm  can  add  a  line  feed  to each
+          incoming carriage  return if  needed. Use  ALT-F3  to toggle
+          this on and  off.  The  default is  CR  only. If text  lines
+          overwrite  each  other, the  remote  is not sending LFs,  so
+          switch to CR/LF.  If text appears  double  spaced use the CR
+          setting. A message is briefly displayed when you toggle this
+          option.
+
+
+          BREAK
+          -----
+
+
+          Pressing  CTRL-BREAK  will cause  a 350 millisecond  spacing
+          condition (break)  on  the  line.  On some non IBM  machines
+          pressing  CTRL-BREAK can cause  a lockup; therefore we  have
+          provided  another keystroke,  ALT-F7, which will  also cause
+          the break condition to occur. Use the keyboard macro feature
+          if  you require a specific character be sent for the  remote
+          to realize a break.
+
+
+          ENDING A PROCOMM SESSION
+          ------------------------
+
+
+          When  your communications  work  is  finished, press  ALT-X.
+          You'll be asked to  verify that you wish to leave. Enter 'N'
+          to continue working or 'Y' to exit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   48
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                    Overview
+
+
+          ProComm  emulates a  number of  popular  terminals.  ProComm
+          handles most  of  the standard  features  and  many  of  the
+          extended features of the terminals  emulated.  Functions  of
+          these terminals that are not emulated are still processed to
+          insure that all control codes are handled properly.
+
+          Due to the wide  variety of protocol convertors on mainframe
+          front-end   processors,  some  keys  may   not  function  as
+          expected.   These  emulations  have  been  tested  with  the
+          mainframe systems  at the University  of  Missouri, Columbia
+          and the University  of  California,  Berkeley,  as  well  as
+          within private  industry. If  you encounter a problem, refer
+          to the TRANSMITTED  CODES column in the  terminal  emulation
+          charts on the following pages to see  if ProComm is  sending
+          the code your protocol convertor is expecting.
+
+          If  you encounter any errors in these emulations or have any
+          questions, please let us know.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   49
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                 Digital Equipment Corporation VT-100 and VT-102
+
+
+          ProComm supports the standard VT-100  and VT-102  functions.
+          Supported  functions include:  full/half  duplex,  set/reset
+          modes,  scroll region, special graphics character set, US 50
+          UK character sets, keypad application mode, cursor  control,
+          erase  functions,  insert/delete  lines,  and  full  display
+          attributes  (including extensions  for ANSI color/graphics).
+          132 column mode is not  supported.  ProComm responds  to the
+          the  Identify and Device Attributes commands  with ESC[?1;2c
+          (VT-100 with advanced video option). ProComm responds to the
+          the  Ctrl-E  (ENQ)  enquiry  function by sending the  string
+          stored for keyboard macro ALT-0.  This  "answerback message"
+          is  sent  only  if ANSWER BACK is enabled in  ProComm  setup
+          (ALT-S).  Keypad  Application  Mode functions  are mapped to
+          ProComm function keys as shown in the chart below.
+
+
+          ProComm KEYS     DEC VT-100 FUNCTION       TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Delete ......... Character Delete ..................... 0x7F
+          Home ........... Home Cursor ...................... 0x1B5B48
+          Cursor Up ...... Cursor Up ........................ 0x1B5B41
+          Cursor Down .... Cursor Down ...................... 0x1B5B42
+          Cursor Left .... Cursor Left ...................... 0x1B5B44
+          Cursor Right ... Cursor Right ..................... 0x1B5B43
+          Ctrl-PgDn ...... Clear screen ............. 0x1B5B481B5B324A
+          End ............ Erase end of line ................ 0x1B5B4B
+          Ctrl-Home ...... Insert Line ...................... 0x1B5B4C
+          Ctrl-PgUp ...... Delete Line ...................... 0x1B5B4D
+          Ctrl-J ......... Line Feed ............................ 0x0A
+
+          F1 ............. Keypad Application mode 1 ........ 0x1B4F71
+          F2 ............. Keypad Application mode 2 ........ 0x1B4F72
+          F3 ............. Keypad Application mode 3 ........ 0x1B4F73
+          F4 ............. Keypad Application mode 4 ........ 0x1B4F74
+          F5 ............. Keypad Application mode 5 ........ 0x1B4F75
+          F6 ............. Keypad Application mode 6 ........ 0x1B4F76
+          F7 ............. Keypad Application mode 7 ........ 0x1B4F77
+          F8 ............. Keypad Application mode 8 ........ 0x1B4F78
+          F9 ............. Keypad Application mode 9 ........ 0x1B4F79
+          F10 ............ Keypad Application mode 0 ........ 0x1B4F70
+
+          Shift-F1 ....... Program Function 1 (PF1) ......... 0x1B4F50
+          Shift-F2 ....... Program Function 2 (PF2) ......... 0x1B4F51
+          Shift-F3 ....... Program Function 3 (PF3) ......... 0x1B4F52
+          Shift-F4 ....... Program Function 4 (PF4) ......... 0x1B4F53
+          Shift-F5 ....... Keypad Application mode DASH ..... 0x1B4F6D
+          Shift-F6 ....... Keypad Application mode COMMA .... 0x1B4F6C
+          Shift-F7 ....... Keypad Application mode PERIOD ... 0x1B4F6E
+          Shift-F8 ....... Keypad Application mode ENTER .... 0x1B4F4D
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   50
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+              Mapping of VT-100 Keypad Application Mode Functions
+
+             PROCOMM FUNCTION KEYS              DEC VT-100 KEYPAD
+
+             F1 - F10      SF1 - SF10
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          | 1  | | 2  |  |PF1 | |PF2 |     |PF1 | |PF2 | |PF3 | |PF4 |
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          | 3  | | 4  |  |PF3 | |PF4 |     | 7  | | 8  | | 9  | | -  |
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          | 5  | | 6  |  | -  | | ,  |     | 4  | | 5  | | 6  | | ,  |
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ +----+
+          | 7  | | 8  |  | .  | |ENTR|     | 1  | | 2  | | 3  | | E  |
+          +----+ +----+  +----+ +----+     +----+ +----+ +----+ | N  |
+          +----+ +----+  +----+ +----+     +-----------+ +----+ | T  |
+          | 9  | | 0  |  |    | |    |     |     0     | | .  | | R  |
+          +----+ +----+  +----+ +----+     +-----------+ +----+ +----+
+
+
+
+                Keypad Application Mode for VAX/VMS EDT Editor
+
+                             PROCOMM FUNCTION KEYS
+
+                     F1 -- F10                   SF1 -- SF10
+             +---------+  +---------+     +---------+  +---------+
+             |  WORD   |  |   EOL   |     |  GOLD   |  |  HELP   |
+             |  [CC]   |  |[DEL EOL]|     |         |  |         |
+             +---------+  +---------+     +---------+  +---------+
+             +---------+  +---------+     +---------+  +---------+
+             |  CHAR   |  | ADVANCE |     |FIND NEXT|  |  DEL L  |
+             |[SPECINS]|  | [BOTTOM]|     |  [FIND] |  | [UND L] |
+             +---------+  +---------+     +---------+  +---------+
+             +---------+  +---------+     +---------+  +---------+
+             |  BACKUP |  |   CUT   |     |  DEL W  |  |  DEL C  |
+             |  [TOP]  |  | [PASTE] |     | [UND W] |  | [UND C] |
+             +---------+  +---------+     +---------+  +---------+
+             +---------+  +---------+     +---------+  +---------+
+             |  PAGE   |  |  SECT   |     | SELECT  |  |  ENTER  |
+             |  [CMD]  |  | [FILL]  |     | [RESET] |  |  [SUBS] |
+             +---------+  +---------+     +---------+  +---------+
+             +---------+  +---------+     +---------+  +---------+
+             | APPEND  |  |  LINE   |     |  NOT    |  |  NOT    |
+             | [REPL]  |  |[OPENLIN]|     |  USED   |  |  USED   |
+             +---------+  +---------+     +---------+  +---------+
+
+               Press GOLD get first to get bracketed [] functions
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   51
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                    IBM 3101
+
+
+          ProComm  supports  the   standard  IBM  3101   Model   1x/2x
+          functions. Block  mode is not supported. Supported functions
+          include:  full/half  duplex,  full   character  set,  scroll
+          on/off,  program  function keys,  cursor  control, and erase
+          functions.
+
+
+          ProComm KEYS     IBM 3101 FUNCTION         TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Delete ......... Character Delete ..................... 0x7F
+          Home ........... Home Cursor ........................ 0x1B48
+          Cursor Up ...... Cursor Up .......................... 0x1B41
+          Cursor Down .... Cursor Down ........................ 0x1B42
+          Cursor Left .... Cursor Left ........................ 0x1B44
+          Cursor Right ... Cursor Right ....................... 0x1B43
+          Ctrl-PgDn ...... Clear screen ....................... 0x1B4C
+          End ............ Erase end of line .................. 0x1B49
+          Ctrl-End ....... Erase end of screen ................ 0x1B4A
+
+          F1 ............. Program Function 1 (PF1) ......... 0x1B610D
+          F2 ............. Program Function 2 (PF2) ......... 0x1B620D
+          F3 ............. Program Function 3 (PF3) ......... 0x1B630D
+          F4 ............. Program Function 4 (PF4) ......... 0x1B640D
+          F5 ............. Program Function 5 (PF5) ......... 0x1B650D
+          F6 ............. Program Function 6 (PF6) ......... 0x1B660D
+          F7 ............. Program Function 7 (PF7) ......... 0x1B670D
+          F8 ............. Program Function 8 (PF8) ......... 0x1B680D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   52
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                              Televideo 900 Series
+
+
+          ProComm  supports   the  standard   Televideo   900   series
+          functions. Supported  functions include:  full/half  duplex,
+          program function  keys, cursor control, erase functions, and
+          full display attributes.  The  main  difference between  the
+          910/920 and the 925/950 emulations is in the codes generated
+          for cursor down and in control codes for display attributes.
+          The special graphics character set and user loadable  status
+          line are supported.
+
+
+          ProComm KEYS     TELEVIDEO 9xx FUNCTION    TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Backtab ........ Reverse Tab ........................ 0x1B49
+          Insert ......... Insert Character ................... 0x1B51
+          Ctrl-Home ...... Insert Line ........................ 0x1B45
+          Delete ......... Delete Character ................... 0x1B57
+          Ctrl-PgUp ...... Delete Line ........................ 0x1B52
+          Home ........... Home Cursor .......................... 0x1E
+          Cursor Up ...... Cursor Up ............................ 0x1B
+          Cursor Down .... Cursor Down (910/920) ................ 0x0A
+                           Cursor Down (925/950) ................ 0x16
+          Cursor Left .... Cursor Left .......................... 0x18
+          Cursor Right ... Cursor Right ......................... 0x1C
+          Ctrl-PgDn ...... Clear Screen ......................... 0x1A
+          End ............ Line Erase ......................... 0x1B54
+          Ctrl-End ....... Page Erase ......................... 0x1B59
+
+          F1 ............. Function 1 (F1) .................. 0x01400D
+          F2 ............. Function 2 (F2) .................. 0x01410D
+          F3 ............. Function 3 (F3) .................. 0x01420D
+          F4 ............. Function 4 (F4) .................. 0x01430D
+          F5 ............. Function 5 (F5) .................. 0x01440D
+          F6 ............. Function 6 (F6) .................. 0x01450D
+          F7 ............. Function 7 (F7) .................. 0x01460D
+          F8 ............. Function 8 (F8) .................. 0x01470D
+          F9 ............. Function 9 (F9) .................. 0x01480D
+          F10 ............ Function 10 (F10) ................ 0x01490D
+          Shift-F1 ....... Function 11 (F11) ................ 0x014A0D
+          Shift-F2 ....... FUNCT .......................... *see below
+          Shift-F3 ....... Shift Line Erase ................... 0x1B74
+          Shift-F4 ....... Shift Page Erase ................... 0x1B79
+          Shift-F5 ....... Shift Line Insert .................. 0x1B4E
+          Shift-F6 ....... Shift Line Delete .................. 0x1B4F
+          Shift-F7 ....... Shift Character Insert ............. 0x1B71
+          Shift-F8 ....... Shift Character Delete ............. 0x1B72
+          * To emulate  the Televideo  FUNCT key operation,  press and
+          release Shift-F2, then press and release the key you wish to
+          use  in  in  conjunction with  FUNCT.  This  will  send  the
+          standard 3 byte FUNCT sequence: <SOH> <key pressed> <CR>.
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   53
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                       Digital Equipment Corporation VT-52
+
+
+          ProComm   supports   the  standard  model  VT-52  functions.
+          Supported   functions  include:  full/half   duplex,  keypad
+          application mode, cursor control, erase  functions, and full
+          display  attributes. ProComm  responds to  the  the Identify
+          command (ESC Z)  with ESC/Z. (Standard VT-52  identification
+          sequence). Keypad Application Mode  functions  are mapped to
+          ProComm function keys as shown in the chart below.
+
+
+          ProComm KEYS     DEC VT-52 FUNCTION        TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Delete ......... Character Delete ..................... 0x7F
+          Home ........... Home Cursor ........................ 0x1B48
+          Cursor Up ...... Cursor Up .......................... 0x1B41
+          Cursor Down .... Cursor Down ........................ 0x1B42
+          Cursor Left .... Cursor Left ........................ 0x1B44
+          Cursor Right ... Cursor Right ....................... 0x1B43
+          Ctrl-PgDn ...... Clear screen ................... 0x1B481B4A
+          End ............ Erase end of line .................. 0x1B4B
+
+          F1 ............. Keypad Application mode 1 ........ 0x1B3F71
+          F2 ............. Keypad Application mode 2 ........ 0x1B3F72
+          F3 ............. Keypad Application mode 3 ........ 0x1B3F73
+          F4 ............. Keypad Application mode 4 ........ 0x1B3F74
+          F5 ............. Keypad Application mode 5 ........ 0x1B3F75
+          F6 ............. Keypad Application mode 6 ........ 0x1B3F76
+          F7 ............. Keypad Application mode 7 ........ 0x1B3F77
+          F8 ............. Keypad Application mode 8 ........ 0x1B3F78
+          F9 ............. Keypad Application mode 9 ........ 0x1B3F79
+          F10 ............ Keypad Application mode 0 ........ 0x1B3F70
+
+          Shift-F1 ....... Program Function 1 (PF1) ........... 0x1B50
+          Shift-F2 ....... Program Function 2 (PF2) ........... 0x1B51
+          Shift-F3 ....... Program Function 3 (PF3) ........... 0x1B52
+          Shift-F4 ....... Program Function 4 (PF4) ........... 0x1B53
+
+          Shift-F5 ....... Keypad Application mode DASH ..... 0x1B3F6D
+          Shift-F6 ....... Keypad Application mode COMMA .... 0x1B3F6C
+          Shift-F7 ....... Keypad Application mode PERIOD ... 0x1B3F6E
+          Shift-F8 ....... Keypad Application mode ENTER .... 0x1B3F4D
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   54
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                              Lear Sieglar ADM 3/5
+
+
+          ProComm supports  the  standard  ADM 3/5  series  functions.
+          Supported   functions   include:   full/half  duplex,   full
+          character set, erase functions, and cursor control.
+
+
+          ProComm KEYS     ADM 3/5 FUNCTION          TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ..................... 0x1B49
+          Backtab ........ Reverse Tab ........................ 0x1B51
+          Home ........... Home Cursor .......................... 0x1E
+          Cursor Up ...... Cursor Up ............................ 0x1B
+          Cursor Down .... Cursor Down .......................... 0x0A
+          Cursor Left .... Cursor Left .......................... 0x18
+          Cursor Right ... Cursor Right ......................... 0x1C
+          Ctrl-PgDn ...... Clear screen ......................... 0x1A
+          End ............ Erase end of line .................. 0x1B54
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   55
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                 Heath/Zenith 19
+
+
+          ProComm  supports the  standard  Heath/Zenith 19  functions.
+          Supported  functions   include:   full/half   duplex,   full
+          character  set,  program  function  keys,  erase  functions,
+          cursor control, and display attributes.
+
+
+          ProComm KEYS     H-19 FUNCTION             TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Home ........... Home Cursor .................... 0x1B595F5F
+          Cursor Up ...... Cursor Up .......................... 0x1B41
+          Cursor Down .... Cursor Down ........................ 0x1B42
+          Cursor Left .... Cursor Left ........................ 0x1B44
+          Cursor Right ... Cursor Right ....................... 0x1B43
+          Ctrl-PgDn ...... Clear screen ....................... 0x1B4C
+          End ............ Erase end of line .................. 0x1B45
+          Ctrl-Home ...... Insert Line ........................ 0x1B4C
+          Ctrl-PgUp ...... Delete Line ........................ 0x1B4D
+
+          F1 ............. Program Function 1 (PF1) ........... 0x1B53
+          F2 ............. Program Function 2 (PF2) ........... 0x1B54
+          F3 ............. Program Function 3 (PF3) ........... 0x1B55
+          F4 ............. Program Function 4 (PF4) ........... 0x1B56
+          F5 ............. Program Function 5 (PF5) ........... 0x1B57
+          F6 ............. Program Function 6 (PF6) ........... 0x1B50
+          F7 ............. Program Function 7 (PF7) ........... 0x1B51
+          F8 ............. Program Function 8 (PF8) ........... 0x1B52
+          F9 ............. Program Function 9 (PF9) ........... 0x1B30
+          F10 ............ Program Function 10 (PF10) ......... 0x1B31
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   56
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                 ADDS Viewpoint
+
+
+          ProComm  supports  the standard  ADDS  Viewpoint  functions.
+          Supported   functions  include:   full/half  duplex,   erase
+          functions,  inset/delete   functions,  cursor  control,  and
+          display attributes.
+
+
+          ProComm KEYS     ADDS FUNCTION             TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Home ........... Home Cursor .................... 0x1B595F5F
+          Cursor Up ...... Cursor Up ............................ 0x01
+          Cursor Down .... Cursor Down .......................... 0x0A
+          Cursor Left .... Cursor Left .......................... 0x15
+          Cursor Right ... Cursor Right ......................... 0x06
+          Ctrl-PgDn ...... Clear screen ......................... 0x0C
+          End ............ Erase end of line .................. 0x1B4B
+          Ctrl-End ....... Erase end of screen ................ 0x1B6B
+          Ins ............ Insert Character ................... 0x1B46
+          Ctrl-Home ...... Insert Line ........................ 0x1B4D
+          Del ............ Delete Character ................... 0x1B45
+          Ctrl-PgUp ...... Delete Line ........................ 0x1B6C
+
+          F1 ............. Function 1 (F1) .................. 0x02310D
+          F2 ............. Function 2 (F2) .................. 0x02320D
+          F3 ............. Function 3 (F3) .................. 0x02330D
+          F4 ............. Function 4 (F4) .................. 0x02340D
+          F5 ............. Function 5 (F5) .................. 0x02350D
+          F6 ............. Function 6 (F6) .................. 0x02360D
+          F7 ............. Function 7 (F7) .................. 0x02370D
+          F8 ............. Function 8 (F8) .................. 0x02380D
+
+          Shift F1 ....... Shift Function 1 (F1) ............ 0x02190D
+          Shift F2 ....... Shift Function 2 (F2) ............ 0x02290D
+          Shift F3 ....... Shift Function 3 (F3) ............ 0x02390D
+          Shift F4 ....... Shift Function 4 (F4) ............ 0x02490D
+          Shift F5 ....... Shift Function 5 (F5) ............ 0x02590D
+          Shift F6 ....... Shift Function 6 (F6) ............ 0x02690D
+          Shift F7 ....... Shift Function 7 (F7) ............ 0x02790D
+          Shift F8 ....... Shift Function 8 (F8) ............ 0x02890D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   57
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                    WYSE 100
+
+
+          ProComm  supports  the  standard  WYSE  functions. Supported
+          functions  include:   full/half  duplex,  erase   functions,
+          inset/delete   functions,   cursor   control,   and  display
+          attributes.
+
+
+          ProComm KEYS     WYSE 100 FUNCTION         TRANSMITTED CODES
+          ------------------------------------------------------------
+          Tab ............ Horizontal Tab ....................... 0x09
+          Backtab ........ Reverse Tab ........................ 0x1B49
+          Insert ......... Insert Character ................... 0x1B51
+          Ctrl-Home ...... Insert Line ........................ 0x1B45
+          Delete ......... Delete Character ..................... 0x7F
+          Ctrl-PgUp ...... Delete Line ........................ 0x1B52
+          Home ........... Home Cursor .......................... 0x1E
+          Cursor Up ...... Cursor Up ............................ 0x1B
+          Cursor Down .... Cursor Down .......................... 0x0A
+          Cursor Left .... Cursor Left .......................... 0x18
+          Cursor Right ... Cursor Right ......................... 0x1C
+          Ctrl-PgDn ...... Clear Screen ......................... 0x1A
+          End ............ Line Erase ......................... 0x1B54
+          Ctrl-End ....... Page Erase ......................... 0x1B59
+
+          F1 ............. Function 1 (F1) .................. 0x01400D
+          F2 ............. Function 2 (F2) .................. 0x01410D
+          F3 ............. Function 3 (F3) .................. 0x01420D
+          F4 ............. Function 4 (F4) .................. 0x01430D
+          F5 ............. Function 5 (F5) .................. 0x01440D
+          F6 ............. Function 6 (F6) .................. 0x01450D
+          F7 ............. Function 7 (F7) .................. 0x01460D
+          F8 ............. Function 8 (F8) .................. 0x01470D
+
+          Shift F1 ....... Shift Function 1 (F1) ............ 0x01480D
+          Shift F2 ....... Shift Function 2 (F2) ............ 0x01490D
+          Shift F3 ....... Shift Function 3 (F3) ............ 0x014A0D
+          Shift F4 ....... Shift Function 4 (F4) ............ 0x014B0D
+          Shift F5 ....... Shift Function 5 (F5) ............ 0x014C0D
+          Shift F6 ....... Shift Function 6 (F6) ............ 0x014D0D
+          Shift F7 ....... Shift Function 7 (F7) ............ 0x014E0D
+          Shift F8 ....... Shift Function 8 (F8) ............ 0x014F0D
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   58
+
+
+
+          Appendix A                                Terminal Emulation
+
+
+
+
+
+                                    ANSI-BBS
+
+
+          This  is  the  recommended emulation  for use  with bulletin
+          board systems that use ANSI graphics and color. the ANSI-BBS
+          mode  processes the ANSI  codes given  in the DOS  technical
+          reference manual, and behaves  in the same manner as the DOS
+          ANSI.SYS device driver. (ProComm  does not  use the ANSI.SYS
+          driver itself.)  This emulation is  similar  to  the  VT-100
+          emulation, but  the  VT-100 emulation handles normal,  bold,
+          and reverse video in a different manner. The VT-100 keyboard
+          mapping is used with this emulation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   59
+
+
+
+          Appendix B                                  ProComm Commands
+
+
+
+
+
+                             COMMAND REFERENCE GUIDE
+
+
+                                 MAJOR FUNCTIONS
+
+                       Dialing Directory .......... Alt-D
+                       Automatic Redial............ Alt-R
+                       Keyboard Macros ............ Alt-M
+                       Modem Parameters ........... Alt-P
+                       Translate Table ............ Alt-W
+                       Editor ..................... Alt-A
+                       Exit ....................... Alt-X
+                       Host Mode .................. Alt-Q
+                       Chat Mode .................. Alt-O
+                       DOS Gateway ............... Alt-F4
+                       Command File .............. Alt-F5
+                       Redisplay ................. Alt-F6
+
+
+                                UTILITY FUNCTIONS
+
+                       Program Info ............... Alt-I
+                       Setup screen ............... Alt-S
+                       Kermit server commands ......Alt-K
+                       Change Directory ........... Alt-B
+                       Clear Screen ............... Alt-C
+                       Toggle Duplex .............. Alt-E
+                       Hang Up Phone .............. Alt-H
+                       Elapsed Time ............... Alt-T
+                       Print On/Off ............... Alt-L
+                       Set Colors ................. Alt-Z
+                       Toggle CR - CR/LF ......... Alt-F3
+                       Break Key ..... ALT-F7, Ctrl-Break
+
+
+                                 FILE FUNCTIONS
+
+                       Send files .................. PgUp
+                       Receive files ............... PgDn
+                       File Directory ............. Alt-F
+                       View a file ................ Alt-V
+                       Screen Dump ................ Alt-G
+                       Log Open/Close toggle ..... Alt-F1
+                       Log hold .................. Alt-F2
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   60
+
+
+
+          Appendix C                                     Command Files
+
+
+
+
+
+                 COMMAND FILE COMMANDS (Alphabetical by Command)
+
+
+          Command Form                    Command Function
+          ------------------------------------------------------------
+          %A                              Sound alarm.
+          %B"drive and/or dir"            Change default drive and/or
+                                             directory.
+          %C"dd entry"                    Call dialing directory entry
+                                             with long distance code.
+          %D"DOS command"                 Execute DOS commands.
+          %E0                             Emulate IBM 3101.
+          %E1                             Emulate DEC VT100.
+          %E2                             Emulate Televideo 912/920.
+          %E3                             Emulate Televideo 925/950.
+          %E4                             Emulate DEC VT52.
+          %E5                             Emulate ADM3/5.
+          %E6                             Emulate Heath 19.
+          %E7                             ANSI-BBS.
+          %E8                             ADDS Viewpoint.
+          %E9                             Wyse 100
+          %F"x"                           Change comm parameters (see
+                                             manual).
+          %G                              Screen dump to PROCOMM.IMG.
+          %H                              Hang-up the phone.
+          %I"string to wait for"          Wait for incoming string.
+          %Jx                             Send ALT key sequence.
+          %KBB                            Kermit binary mode.
+          %KBT                            Kermit text mode.
+          %KF                             Send Kermit Finish server
+                                             command.
+          %KG"filespec"                   Send Kermit Get server
+                                             command.
+          %KL                             Send Kermit Logout server
+                                             command.
+          %KS"filespec"                   Send Kermit Send server
+                                             command.
+          %LC                             Close log file.
+          %LH                             Hold log file.
+          %LO"logname"                    Open log file.
+          %LPC                            Close printer logging.
+          %LPO                            Open printer logging.
+          %LR                             Resume log file.
+          %M"message"                     Display message on screen.
+          %NY"prompt"                     Prompt for, get and send
+                                             user input.
+          %NN"prompt"                     Prompt for, get and send
+                                             user input (masked).
+          %OB                             Use BIOS for screen writes.
+          %OD                             Use direct screen writes.
+          %P"seconds to look"             Seconds to look for incoming string.
+          %Q                              Quit ProComm.
+          %R"redial delay"                Reset redial delay time.
+          %SAY                            Alarm on.
+
+
+          Copyright (C) 1986 PIL Software Systems                   61
+
+
+
+          Appendix C                                     Command Files
+
+
+
+
+
+          %SAN                            Alarm off.
+          %SN                             Sound off.
+          %ST"time in seconds"            Set alarm time.
+          %SY                             Sound on.
+          %T"string"                      Transmit string out port.
+          %U1                             Clear screen.
+          %U2                             CR as CR.
+          %U3                             CR as CR/LF.
+          %U4                             Full duplex.
+          %U5                             Half duplex.
+          %U6                             Break.
+          %U7                             Line wrap on.
+          %U8                             Line wrap off.
+          %U9                             Scroll on.
+          %U0                             Scroll off.
+          %UBN                            BS non-destructive
+          %UBY                            BS destructive.
+          %UHN                            XON/XOFF handshake off.
+          %UHY                            XON/XOFF handshake on.
+          %UXN                            XMODEM normal mode.
+          %UXR                            XMODEM relaxed mode.
+          %VH                             Start host mode.
+          %VP"pswd"                       Set host password.
+          %VS"pswd"                       Set shell password.
+          %W"seconds to wait"             Wait for "seconds" seconds.
+          %XDK                            Download Kermit.
+          %XDM                            Download MODEM7.
+          %XDT                            Download Telink.
+          %XDX"filespec"                  Download XMODEM.
+          %XDY"filespec"                  Download YMODEM.
+          %XDZ                            Download YMODEM batch.
+          %XUA"filespec"                  Upload ASCII.
+          %XUK"filespec"                  Upload Kermit.
+          %XUM"filespec"                  Upload MODEM7.
+          %XUT"filespec"                  Upload Telink.
+          %XUX"filespec"                  Upload XMODEM.
+          %XUY"filespec"                  Upload YMODEM.
+          %XUZ"filespec"                  Upload YMODEM batch.
+          %YC"x"                          Set ASCII u/l pace character.
+          %YDCx                           Set ASCII d/l CR translation.
+          %YDLx                           Set ASCII d/l LF translation.
+          %YPC"millisecs"                 Set ASCII u/l character pacing.
+          %YPL"1/10 secs"                 Set ASCII u/l line pacing.
+          %YUCx                           Set ASCII u/l CR translation.
+          %YULx                           Set ASCII u/l LF translation.
+          %YXN                            Set ASCII u/l blank expansion off.
+          %YXY                            Set ASCII u/l blank expansion on.
+          %YEN                            ASCII u/l echo off.
+          %YEY                            ASCII u/l echo on.
+          %YP"pace count"                 Set ASCII upload pace count.
+          %ZY                             Translate table on.
+          %ZN                             Translate table off.
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   62
+
+
+
+          Appendix C                                     Command Files
+
+
+
+
+
+          All commands  start  with  '%'.  The command  letter(s) must
+          immediately follow the '%', and  may be upper or lower case.
+          All arguments must be  enclosed  in quotes ("")or tick marks
+          (''), and must immediately follow  the command letters.  All
+          other characters in the file are ignored, and may be used as
+          comments.  ProComm looks for an  extension  of  .CMD when it
+          lists available command files.
+
+          When using the 'I'  command, the strings must match  exactly
+          in  case.  Use  the  'P' command to set the amount  of  time
+          ProComm waits for the  incoming character string to be found
+          (default is 30).
+
+          Strings  to be transmitted ('T' command) use the translation
+          conventions  described  in  the  section  on  output  string
+          translation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   63
+
+
+
+          Appendix D                                  Utility Programs
+
+
+
+
+
+                         Timed Execution Facility (TEF)
+
+
+
+          The  ProComm  Timed  Execution  Facility is  a  stand  alone
+          program that allows execution of a ProComm command file at a
+          predetermined time.
+
+          TEF is  started from the DOS prompt  by typing  the command:
+          TEF
+
+          TEF will prompt you for the  name of  a ProComm command file
+          and the time to start its execution. TEF will wait until the
+          specified time and then load and execute  ProComm passing in
+          the name of the command file.
+
+          The time must be entered in  military format.  The hour must
+          be 0-23 and  the  minutes must be 0-59.  Pressing ESC at any
+          time will abort TEF.  Pressing  F1  will allow you to change
+          the command file and execution  time. Pressing F2 will blank
+          the screen. (Pressing  any other key  will  turn  the screen
+          back on).
+
+          TEF can also be run in a batch mode. Specify commands on the
+          command line like:
+
+               TEF cmdfile XX:XX
+
+
+
+
+
+
+                      Dialing Directory Conversion Utility
+
+
+
+          ProComm is distributed  with  a dialing directory conversion
+          program called CONVERT.EXE. Use CONVERT to change PC-TALK or
+          QMODEM  dialing  directories to  ProComm format. To execute,
+          type: CONVERT on  the  DOS command line  and then follow the
+          prompts.
+
+          NOTE: When converting QMODEM directories only the  first 100
+          entries will  be converted. In  addition, the modem  command
+          will not be converted and will default to ATDT.
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   64
+
+
+
+          Appendix E                              Answers to Questions
+
+
+
+
+
+          Question:
+
+          ALT-H doesn't work with my modem. What's wrong?
+
+          Answer:
+
+          ProComm first attempts to  hang up by dropping the DTR  line
+          to the modem. Your modem must  monitor the DTR line for this
+          to work. Users of Hayes external modems must have switch one
+          in  the open  (up)  position.  Owners  of  the  newer  Hayes
+          internals  must have  a jumper correctly  set. Consult  your
+          modem manual  for further  details.  If  your  configuration
+          prevents the use of DTR in hanging up, ProComm can also send
+          a  hangup string.  After  attempting to drop DTR the program
+          checks carrier detect to see  if you are still online. If so
+          it will  send the hangup string you  have specified  in  the
+          setup screen.
+
+
+          Question:
+
+          When using  the redial facility, or  making  a call  from  a
+          command file, the program  doesn't  realize when I've made a
+          connection.
+
+          Answer:
+
+          Make sure that  ProComm's modem connect string is  correctly
+          defined for  the  message  your modem  returns  for  carrier
+          detect. The ProComm default is "CONNECT".
+
+
+          Question:
+
+          I  sometimes  have  trouble  opening  files  for logging  or
+          downloading.
+
+          Answer:
+
+          ,pi   /CONFIG.SYS  You  may  need  to  increase  the  FILES=
+          parameter in your CONFIG.SYS file. We suggest using at least
+          FILES=15. Consult your DOS manual for more details.
+
+
+          Question:
+
+          I can't get  the dialing directory  to  call using the  long
+          distance code I've put in the number.
+
+          Answer:
+
+          Specify the long  distance  code to be used when you make to
+          call  itself,  not  when  you  enter  the  number  into  the
+          directory.  For instance, say "#37"  at the  "==>" prompt to
+
+
+          Copyright (C) 1986 PIL Software Systems                   65
+
+
+
+          Appendix E                              Answers to Questions
+
+
+
+
+
+          dial  entry  number  37  using  the '#' long distance  code.
+          Entering a long distance code as part of the number will not
+          work.
+
+
+          Question:
+
+          I'm having trouble getting ProComm to work with my PCjr. Any
+          ideas?
+
+          Answer:
+
+          The  PCjr  is somewhat  different  in  the  way  it  handles
+          communications. A solution that has worked for  a  number of
+          users  is this: Call  our BBS  and  download a  file  called
+          COMSWAP.ARC. After  un-arcing the  file  you  should find  2
+          programs called  COMSWAP.COM  and  COMREST.COM. Run  COMSWAP
+          before  running  ProComm  and run  COMREST  after. Then  use
+          ProComm set to COM2:.
+
+
+          Question:
+
+          When I call your bulletin board my  modem  connects but then
+          nothing else happens. What's wrong?
+
+          Answer:
+
+          The  Fido BBS software, and a number of other  BBS programs,
+          require some input so that the modems can determine the baud
+          rate and  start their handshake. After  connecting, send the
+          remote several carriage returns. If you are calling  a  Fido
+          at 2400 baud you should send several SPACES instead.
+
+
+          Question:
+
+          When I'm using a multi-tasking operating  system and running
+          ProComm in the background, window displays  bleed through to
+          the active partition.
+
+          Answer:
+
+          Go into the general setup screen and  set ProComm to use the
+          BIOS screen  write  method. It  is much slower but  will not
+          cause the bleed through that you are experiencing.
+
+
+          Question:
+
+          When I try to use the DOS gateway it says 'Command processor
+          not found'. What does this mean?
+
+          Answer:
+
+
+          Copyright (C) 1986 PIL Software Systems                   66
+
+
+
+          Appendix E                              Answers to Questions
+
+
+
+
+
+          In order to use the gateway, ProComm must  load  a secondary
+          copy  of the command  processor (COMMAND.COM). It  uses  the
+          environment  variable COMSPEC  to  determine  the  name  and
+          location  of the command processor. COMSPEC is set  when you
+          boot  to the drive, directory and  program  you booted from.
+          Problems can arise if you boot off a floppy, and then change
+          the  floppy in the  boot disk drive. To use the gateway, and
+          the ALT-F function, be sure that COMSPEC is set and that the
+          command processor is where COMSPEC says it is.
+
+
+          Question:
+
+          I can't  use the  help  screen  because  MultiLink grabs the
+          ALT-F10 keystroke before ProComm can get it.
+
+          Answer:
+
+          MultiLink  provides an  'escape'  keystroke  to  avoid  that
+          problem.  Simply press  ALT-F9  before pressing  ALT-F10 and
+          MultiLink will let the ALT-F10 through to ProComm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   67
+
+
+
+          Appendix F                          Technical Specifications
+
+
+
+
+
+                        ProComm Technical Specifications
+
+
+
+
+
+
+                    Receive buffer size ...................  2048 Bytes
+
+                    Redisplay buffer size .................. 4000 Bytes
+
+                    Baud rates supported .......................... 300
+                                         ......................... 1200
+                                         ......................... 2400
+                                         ......................... 4800
+                                         ......................... 9600
+                                         ........................ 19200
+
+                    File transfer protocols ..................... ASCII
+                                            .................... XMODEM
+                                            .................... TELINK
+                                            .................... YMODEM
+                                            .................... MODEM7
+                                            .................... KERMIT
+
+                    Serial ports supported ............ COM1 0x3F8 IRQ4
+                                           ............ COM2 0x2F8 IRQ3
+
+                    Video buffer addresses supported .... COLOR 0xB8000
+                                                     ..... MONO 0xB0000
+
+                    Interrupt vectors used ....................... 0x0B
+                                           ....................... 0x0C
+                                           ....................... 0x1B
+                                           ....................... 0x23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   68
+
+
+
+          Appendix G                            Invoice and Order Form
+
+
+
+
+
+          We have  enclosed  a  sample  invoice and  ordering  form to
+          simplify processing your orders. Use the order form to place
+          an order with us.  Use the invoice  within your organization
+          to generate payment for ProComm registrations.
+
+          We   are  now   providing  the  program  on  disk  for  your
+          convenience. Please note that the $10 disk fee  covers media
+          costs,  postage  and   handling  only.  It  does  not  cover
+          registration.  If you are  using  the program  on  a regular
+          basis, and find it  of value, please register  and show your
+          support.
+
+          Business,  commercial or governmental use  of non-registered
+          copies of  ProComm is strictly forbidden. Write for  details
+          on site or corporate licensing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   69
+
+
+
+          Appendix G                            Invoice and Order Form
+
+
+
+
+
+
+
+
+
+          Remit to:          PIL Software Systems              Invoice
+                                  PO Box 1471
+                              Columbia, MO 65205
+
+
+
+
+
+          Sold to:                       Ship to:
+                   --------------------           --------------------
+
+                   --------------------           --------------------
+
+                   --------------------           --------------------
+
+
+
+          ============================================================
+          Date:                        PO #:
+          ============================================================
+           Quan          Description                  Unit    Extended
+          ------------------------------------------------------------
+               |                                   |        |
+               |  ProComm Registration             | $25.00 | $
+          -----|                                   |        |
+               |  ProComm Evaluation Disk          | $10.00 | $
+          -----|                                   |        |
+               |  ProComm Update Disk              | $10.00 | $
+          -----|                                   |        |
+               |  ProComm Package (The Works)      | $50.00 | $
+               |                                   |        |
+          ------------------------------------------------------------
+                                                    Subtotal: $
+          (MO residents please add 4.3% sales tax)       Tax: $
+
+                                                       Total: $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   70
+
+
+
+          Appendix G                            Invoice and Order Form
+
+
+
+
+
+          Make check         PIL Software Systems           Order Form
+          payable to:             PO Box 1471
+                              Columbia, MO 65205
+
+          ============================================================
+          Date:                          PO #:
+          ============================================================
+           Quan          Description                  Unit    Extended
+          ------------------------------------------------------------
+               |                                   |        |
+               |  ProComm Registration             | $25.00 | $
+          -----|     (does not include disk)       |        |
+               |                                   |        |
+               |  ProComm Evaluation Disk          | $10.00 | $
+          -----|     (current version, manual on   |        |
+               |      disk)                        |        |
+               |                                   |        |
+               |  ProComm Update Disk              | $10.00 | $
+          -----|     (I have version ____, send    |        |
+               |      next major release)          |        |
+               |                                   |        |
+               |  The Works!                       | $50.00 | $
+          -----|     (Includes registration,       |        |
+               |      program disk, and printed    |        |
+               |      manual)                      |        |
+               |                                   |        |
+          ------------------------------------------------------------
+                                                    Subtotal: $
+          (MO residents please add 4.3% sales tax)       Tax: $
+
+                                                       Total: $
+
+          Payment by: ( ) Check   ( ) Money Order   ( ) MC   ( ) VISA
+
+               Name:
+                     ------------------------------------------------
+               Addr:
+                     ------------------------------------------------
+                   :
+                     ------------------------------------------------
+               City:
+                     ------------------------------------------------
+              State:
+                     ------------------------------------------------
+                Zip:
+                     ------------------------------------------------
+             Card #:
+                     ------------------------------------------------
+          Exp. Date:
+                     ------------------------------------------------
+
+          Orders outside the U.S.: send check drawn on U.S. bank in U.S.
+                                   dollars, or international money order
+                                   in U.S. dollars.
+
+
+          Copyright (C) 1986 PIL Software Systems                   71
+
+
+
+          Appendix G                            Invoice and Order Form
+
+
+
+
+
+          Mail to:           PIL Software Systems          Information
+                                  PO Box 1471                  Request
+                              Columbia, MO 65205
+
+
+          Please send information regarding corporate and site licenses.
+
+
+               Name:
+                     -------------------------------------------------
+              Title:
+                     -------------------------------------------------
+            Company:
+                     -------------------------------------------------
+               Addr:
+                     -------------------------------------------------
+                   :
+                     -------------------------------------------------
+               City:
+                     -------------------------------------------------
+              State:
+                     -------------------------------------------------
+                Zip:
+                     -------------------------------------------------
+          Day Phone:
+                     -------------------------------------------------
+
+          Estimated copies needed:
+                                   -----------------------------------
+          Possible uses:
+                         ---------------------------------------------
+
+                         ---------------------------------------------
+
+                         ---------------------------------------------
+
+                         ---------------------------------------------
+
+          Questions:
+                     -------------------------------------------------
+
+                     -------------------------------------------------
+
+                     -------------------------------------------------
+
+                     -------------------------------------------------
+
+                     -------------------------------------------------
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems                   72
+
+
+
+          ProComm 2.3                                            Index
+
+
+
+
+
+          INDEX                          ALT-F3  48
+                                         ALT-F4  44
+                                         ALT-F5  30
+                                         ALT-F6  46
+          %                              ALT-F7  48
+            %A  32                       ALT-G  44
+            %B  32                       ALT-H  14, 47
+            %C  32                       ALT-I  46
+            %D  32                       ALT-K  29
+            %E  32                       ALT-L  45
+            %F  33                       ALT-M  44
+            %G  33                       ALT-O  43
+            %H  33                       ALT-P  10
+            %I  33                       ALT-Q  41
+            %J  34                       ALT-R  25
+            %K  34                       ALT-S  12
+            %L  34                       ALT-T  47
+            %M  35                       ALT-V  46
+            %N  35                       ALT-W  30
+            %O  35                       ALT-X  48
+            %P  35                       ALT-Z  45
+            %Q  35                       ANSI-BBS  59
+            %R  36                       answerback  16
+            %S  36                       ASCII file xfer  27
+            %T  36                       ASCII transfer setup
+            %U  36                           20
+            %V  38                       auto answer string  19,
+            %W  38                           41
+            %X  38                       auto redial
+            %Y  39                         See redial
+            %Z  40                       AUTOEXEC.BAT  7
+
+          /                            B
+            /B  8                        bar
+            /F  8, 30                      See vertical bar
+            /M  8                        BIOS screen write  17,
+            /S  8                            66
+                                         blank line expansion
+          A                                  20
+            aborted files  19            break  48
+            address of PIL  2            BS interpretation  16
+            ADDS Viewpoint  57
+            alarm sound  18            C
+            alarm time  18               caret (^)  11
+            ALT-A  44                    carrier detect mask
+            ALT-B  47                        14, 41, 47
+            ALT-C  47                    CD mask
+            ALT-D  21                      See carrier detect
+            ALT-E  47                      mask
+            ALT-F  46                    CED  43
+            ALT-F1  45                   changes to previous  1
+            ALT-F10  9, 67               character pacing  20
+            ALT-F2  45
+
+
+
+          Copyright (C) 1986 PIL Software Systems             Index 73
+
+
+
+          ProComm 2.3                                            Index
+
+
+
+
+
+            chat mode  43                DOS gateway  44, 66
+            clear screen  47             DOS shell password  20,
+            CMD files                        41
+              See script files           Dosedit  43
+            colors                       download, ASCII  27
+              See setting colors         downloaded files  19
+            command files                downloading files  26
+              See script files           DTR  41, 47, 65, 65
+            command line options  8      duplex  15, 47
+            command processor  67
+            command reference  60      E
+            commercial use  2            echo
+            communications param  9        See duplex
+            CompuServe  18, 28           editor  17, 44
+            COMSPEC  44, 46, 67          elapsed time  47
+            CONFIG.SYS  6, 43            ESC translate char  10
+            connect string  13, 65       exclamation point (!
+            control characters  11           10
+            CONVERT  64
+            copying  2                 F
+            copying the program  2       Fido  66
+            corporate license  2         file directory  46
+            CR interpretation (i         file logging
+                15                         See logging, file
+            CR interpretation (o         file name, duplicate
+                15                           27
+            CR translation (dl)  21      file transfer  26
+            CR translation (ul)  21      file viewing  46
+            CR translation char  10      file xfer protocols  27
+            CR-CR/LF  15, 15, 48         FILES=  6, 43, 65
+            CRC                          Finish server cmd  29
+              See XMODEM CRC
+            CTRL translate char  11    G
+            CTRL-BREAK  48               general setup  17
+            CTTY  42                     Get server cmd  29
+
+          D                            H
+            data terminal ready          handshake  15
+              See DTR                    hang-up  47, 65
+            DEC VT-100  50               hang-up string  13
+            DEC VT-100 kb map  51        Heath/Zenith 19  56
+            DEC VT-102  50               help screen  9
+            DEC VT-52  54                host id string  19, 41
+            default directory  47        host mode  41
+            default drive  47            host mode password  19
+            dialing  24                  host mode setup  19
+            dialing command  13          host password  41
+            dialing directory  21
+            dialing, manual  25        I
+            direct screen write  17      IBM 3101  52
+            distribution  4              information screen  8
+            DOS commands  32             invoice  2, 70
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems             Index 74
+
+
+
+          ProComm 2.3                                            Index
+
+
+
+
+
+          K                              PgUp  26
+            Kermit file xfer  29         print directory  25
+            Kermit server cmds  29       printer logging
+            Kermit setup  16               See logging, printer
+            keyboard macros  43          problem reporting  4
+            keystroke changes  1         ProComm environment  7
+                                         ProComm files  7
+          L                              PROCOMM.HST  41
+            LF translation (dl)  21      PROCOMM.IMG  45
+            LF translation (ul)  21      PROCOMM.MSG  42
+            license  2                   product support  4
+            line pacing  20              PROFILE.CMD  31
+            line wrap  16                program description  6
+            log file  17                 program information  46
+            logging, file  45
+            logging, printer  45       R
+            Logout server cmd  29        redial  13, 25
+            long distance codes          redisplay buffer  46
+                24, 65                   registration  2, 2
+            LS ADM 3  55
+                                       S
+          M                              screen dump  44
+            machine requirements  6      screen dump file  17
+            making a call  24            screen write method  17
+            manual dialing               script cmd arguments
+              See dialing, manual            31
+            modem command  23            script cmd reference
+            modem init string  12            61
+            modem pause  14, 26          script cmd syntax  31
+            modem pause char  11         script file changes  1
+            modem setup  12              script file linking
+            MODEM7 file xfer  28             23, 24, 26, 32
+            multi-tasking  66            script files  30
+            MultiLink  67                scrolling  16
+                                         Send server cmd  29
+          N                              SET command  7
+            no connect string  13        setting colors  45
+                                         setup options  11
+          O                              site license  2
+            order from  71               site license info  73
+            output string transl         sliding windows
+                10                         See Kermit file xfer
+            overlays  1                  sound effects  18
+                                         Source, The  5, 29
+          P                              stripping chars  30
+            pace character  20           support BBS  2, 4
+            parameter file chang  1
+            pause delay  14            T
+            pause translate char         TCOMM BBS  29
+                11                       TEF  64
+            PC-HOST BBS  29              Televideo 900 series
+            PCjr  66                         53
+            PgDn  26
+
+
+
+          Copyright (C) 1986 PIL Software Systems             Index 75
+
+
+
+          ProComm 2.3                                            Index
+
+
+
+
+
+            Telink file xfer  28       V
+            terminal emulation  9,       VAX/VMS EDT editor  51
+                15, 49                   vertical bar (|)  10
+            terminal mode  9
+            terminal setup  15         W
+            tilde (~)  11                windows  18
+            timeout delay  14, 25        Wyse 100  58
+            translate CR char  18
+            translate CTRL char  19    X
+            translate ESC char  19       XMODEM CRC  28
+            translate pause char         XMODEM file xfer  28
+                18                       XMODEM mode  18
+            translate table  17, 30      XMODEM relaxed  18, 28
+                                         XON/XOFF  15
+          U
+            upload echo  20            Y
+            upload, ASCII  26            YMODEM file xfer  28
+            uploading files  26
+            user-supported softw  3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Copyright (C) 1986 PIL Software Systems             Index 76
+
+
+
+

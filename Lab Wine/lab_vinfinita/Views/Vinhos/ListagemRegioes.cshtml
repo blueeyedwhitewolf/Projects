@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lab_vinfinita.Models.Regiao>
+
+@{
+    ViewData["Title"] = "Listagem Regioes";
+}
+
+<h2>Listagem de regioes</h2>
+
+<p>
+    <a asp-action="InserirRegiao">Crie uma nova regiao</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeRegiao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeRegiao)
+            </td>
+            <td>
+                <a asp-action="ApagarRegiao" asp-route-id="@item.IdRegiao">Apagar regiao</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

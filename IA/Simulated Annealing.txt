@@ -1,0 +1,38 @@
+Simulated Annealing
+
+-estabelece uma analogia com o processo de anelamento da temperatura, processo metalúrgico. Em cada iteraçao calcula-se o diferencial entre a energia nova e a energia atual.
+
+-minimizaçao: sentido descendente - aceita-se sempre
+-maximizaçao: sentido ascentente - aceita-se mediante uma decisao propabilistica
+
+fator importante: lei de probabilidade utilizada
+
+-objetivo: no inicio a probabilidade de aceitar situaçoes contrarias ao movimento favoravel, sao superiores do que no fim
+
+-utilizar um alfa: Tnew=alpha*T
+-a variaçao da probabilidade é mais suave
+
+
+-importante no inicio fazer um estudo da amplitude dos delta e ver qual o perfil que se obtem para a temperatura e para a lei da probabilidade, para ver se o algoritmo está a ser bem implementado
+
+--------------------------
+
+Temperature will reduce over time
+to escape local minima use stochastic (randomized) search7Combine descente with occasional uphill moves (when there is heat energy)
+
+-forma comum de pesquisa estocastica
+-> se melhora: movimentamos - vai para baixo
+-> caso contrario, com alguma probabilidade, podemos tomar o movimento, mesmo que seja para cima - isto permite evitar minimos locais
+
+-baseado no processo fisico de annealing - quando estamos lentamente a arrefecer um metal para que a sua estrutura cristalina seja o mais regular possivel, atinge-se um estado minimo de energia
+
+-gradualmente reduzir a temperatura - menor probabilidade com o tempo de tomar um passo para cima
+
+-exponencial negativo
+
+-dificuldade: escolher temperatura inicial, constante c e lei de probabilidade
+
+-------------------------
+
+
+
